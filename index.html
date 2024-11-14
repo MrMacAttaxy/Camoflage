@@ -1,0 +1,257 @@
+<!doctype html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+
+        <title>Infared</title>
+
+        <style>
+            html {
+                background-image: url('https://i.pinimg.com/originals/2a/10/59/2a10596dcc3dd8afbd21ffc185baa304.jpg');
+                background-repeat: none;
+                background-size: 130%;
+                margin: 0;
+                padding: 0;
+                font-family: "Courier New", Courier;
+            }
+            .mfs {
+                margin: 0;
+                padding: 0;
+                font-family: "Courier New", Courier;
+                font-weight: bold;
+                font-size: 50px;
+                color: white;
+                animation: changecolors-mfs 10s infinite linear;
+                user-select: none;
+                opacity: 100%;
+                transition: 0.1s;
+            }
+            @keyframes changecolors-mfs {
+                0%{color: white;}
+                50%{color: grey;}
+                100%{color:white;}
+            }
+            .bodymfs {
+                margin: 0;
+                padding: 0;
+                margin-top: 50px;
+                width: 400px;
+                box-shadow: 10px 10px 10px black;
+                border-box: black;
+                backdrop-filter: blur(1vh);
+            }
+            .mfs:hover {
+                font-size: 53px;
+                transition: 0.1s;
+            }
+            .mbm {
+                margin: 0;
+                padding: 0;
+                font-family: "Courier New", Courier;
+                font-weight: bold;
+                font-size: 20px;
+                color: white;
+                animation: changecolors-mfs 10s infinite linear;
+                user-select: none;
+                opacity: 100%;
+                transition: 0.1s;
+            }
+            .bodymbm {
+                margin: 20px;
+                padding: 0;
+                width: 175px;
+                box-shadow: 10px 10px 10px black;
+                border-box: black;
+                backdrop-filter: blur(1vh);
+            }
+            .mbm:hover {
+                font-size: 23px;
+                transition: 0.1s;
+            }
+            .bottombar {
+                margin: 0;
+                padding: 0;
+                backdrop-filter: blur(4vh);
+                display: flex; 
+                justify-content: space-around; 
+                align-items: center; 
+                position: fixed; 
+                bottom: 0; 
+                width: 100%; 
+                border-radius: 4vh 4vh 0vh 0vh;
+                color: white;
+            }
+            body {
+                margin: 0;
+                padding: 0;
+            }
+            .games {
+                margin: 0;
+                padding: 0; 
+                width: 45%;
+                height: 475px;
+                align-items: center;
+                backdrop-filter: blur(4vh);
+                user-select: none;
+                border-radius: 2vh;
+            }
+            .gamebtn {
+                user-select: none;
+                width: 200px;
+                height: 200px;
+                border-radius: 2vh;
+                margin: 20px;
+                transition: 0.1s;
+            }
+            .gamebtn:hover {
+                width: 205px;
+                height: 205px;
+                transition: 0.1s;
+            }
+            #onevonelol {
+                background-repeat: none;
+                transition: 0.1s;
+                border-width: 0px;
+                background-size: 200px;
+                background-image: url('https://i1.sndcdn.com/artworks-y2ECSCErLxkflCDS-ktQA3Q-t500x500.jpg');
+            }
+            #onevonelol:hover {
+                background-size: 205px;
+                transition: 0.1s;
+            }
+            #shellshockers {
+                background-repeat: none;
+                transition: 0.1s;
+                border-width: 0px;
+                background-size: 200px;
+                background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQaDylmYK-C2OIiETfp9qwbMvl1nzoPeVoTHQ&s');
+            }
+            #shellshockers:hover {
+                background-size: 205px;
+                transition: 0.1s;
+            }
+            #eaglercraft {
+                background-repeat: none;
+                transition: 0.1s;
+                border-width: 0px;
+                background-size: 200px;
+                background-image: url('https://avatars.githubusercontent.com/u/136807160?s=200&v=4');
+            }
+            #eaglercraft:hover {
+                background-size: 205px;
+                transition: 0.1s;
+            }
+            #retrobowl {
+                background-repeat: none;
+                transition: 0.1s;
+                border-width: 0px;
+                background-size: 400px;
+                background-position: center;
+                background-image: url('https://play-lh.googleusercontent.com/WRM5Y1xZmzcCP1YtO5zl6G2g7CU5c5ZfjX4UVrgi1bpNgkfy-wuB-bQx3kkeRfaGYQ=w600-h300-pc0xffffff-pd');
+            }
+            #retrobowl:hover {
+                background-size: 405px;
+                transition: 0.1s;
+            }
+            #sylent {
+                background-repeat: none;
+                transition: 0.1s;
+                border-width: 0px;
+                background-size: 200px;
+                background-position: center;
+                background-image: url('https://avatars.githubusercontent.com/u/130938124?s=200&v=4');
+            }
+            #sylent:hover {
+                background-size: 205px;
+                transition: 0.1s;
+            }
+            .iframe {
+                margin-top: 20px;
+                width: 700px;
+                height: 500px;
+                backdrop-filter: blur(2vh);
+                border-radius: 2vh;
+            }
+            #gamewindow {
+                border-radius: 2vh;
+                border-width: 0px;
+                margin-top: 50px;
+            }
+            #fsbtn {
+                margin-bottom: 100px;
+            }
+        </style>
+
+    </head>
+
+    <body>
+        <center>
+        <div class="bodymfs">
+        <h1 class="mfs">Infared</h1>
+        </div>
+        <div class="bodymbm">
+        <p class="mbm">Collection of Games</p>
+        </div>
+        <div class="bodymbm">
+        <p class="mbm">Made by MrMacAttaxy</p>
+        </div>
+        <div class="games">
+            <button class="gamebtn" id="onevonelol" alt="1v1.lol" onclick="gameshow('https://d1tm91r4ytbt54.cloudfront.net/4a2bd50a-0f2f-45be-9e66-a2adf5849945/1680626121644/1v1-lol/index.html ')"></button>
+
+            <button class="gamebtn" id="shellshockers" alt="shell shockers" onclick="gameshow('https://d1tm91r4ytbt54.cloudfront.net/cfdc194a-c785-49fe-b23c-e24a9cf3d561/1680733407296/shellshock.io/index.html')"></button>
+
+            <br />
+
+            <button class="gamebtn" id="eaglercraft" alt="eaglercraft" onclick="gameshow('https://d1tm91r4ytbt54.cloudfront.net/2779cbcb-a02f-48a3-9e2e-95a8d123d165/1685483461665/web/index.html')"></button>
+
+            <button class="gamebtn" id="retrobowl" alt="retrobowl" onclick="gameshow('https://d1tm91r4ytbt54.cloudfront.net/b93894a7-b29b-4edc-8866-c733ff7d695b/1671689486925/retrobowl/index.html')"></button>
+
+            <button class="gamebtn" id="sylent" alt="sylent" onclick="gameshow('https://' + generateRandomText(1) + '.104.243.38.142.backname.io')"></button>
+
+        </div>
+        <div class="iframe">
+            <iframe src="clickgame.html" id="gamewindow" height="400xp" width="550px;"></iframe><br />
+            <button id="fsbtn" onclick="openFullscreen()">Fullscreen</button>
+        </div>
+        <div class="bottombar">
+            <p>Copyright | Infared 2024</p>
+        </div>
+        </center>
+        <script>
+            const gamewindow = document.getElementById("gamewindow");
+
+            function gameshow(url) {
+            gamewindow.src = url;
+            }
+            // Array of words to randomly select from
+            const words = ["lorem", "ipsum", "dolor", "sit", "amet", "consectetur", "adipiscing", "elit", "sed", "do", "eiusmod", "tempor", "incididunt", "ut", "labore", "et", "dolore", "magna", "aliqua", "schoology", "canva", "launchpad", "studentvue"];
+
+            // Function to generate random text
+            function generateRandomText(wordCount) {
+                let text = "";
+                for (let i = 0; i < wordCount; i++) {
+                    const randomIndex = Math.floor(Math.random() * words.length);
+                    text += words[randomIndex] + " ";
+                }
+                return text.trim();
+            }
+
+            // Generate text with a specified number of words and store in a variable
+            let randomTextVariable = generateRandomText(10);
+
+            function openFullscreen() {
+                if (gamewindow.requestFullscreen) {
+                    gamewindow.requestFullscreen();
+                } else if (gamewindow.webkitRequestFullscreen) { /* Safari */
+                    gamewindow.webkitRequestFullscreen();
+                } else if (gamewindow.msRequestFullscreen) { /* IE11 */
+                    gamewindow.msRequestFullscreen();
+                }
+            }
+
+        </script>
+        
+    </body>
+
+</html>
