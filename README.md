@@ -5,6 +5,6 @@
 <h2>What do we have?</h2>
 <ul>
   <li>1v1.lol</li>
-  <li>Eaglercraft</li>
+  <li>Basketball Stars</li>
   <li>And more!</li>
 </ul>
