@@ -1,0 +1,149 @@
+ <!DOCTYPE html>
+ <html>
+    <head>
+
+        <title>Watch Youtube</title>
+        
+        <style>
+            html {
+            background-image: url('https://wallpapers.com/images/featured/moon-night-sky-2w3fqvjr3zkeidxv.jpg');
+            }
+            .videocontainer {
+            transition: 0.2s;
+            width: 400px;
+            border-width: 20px;
+            border-radius: 2vh;
+            border-color: white;
+            color: black;
+            font-weight: bold;
+            font-family: Courier;
+            font-size: 13px;
+            text-align: center;
+            }
+            .videocontainer img {
+            transition: 0.2s;
+            margin-top: 25px;
+            width: 300px;
+            height: 225px;
+            border-radius: 2vh;
+            }
+            .border-imagecontainer {
+            float: left;
+            transition: 0.2s;
+            margin: 20px;
+            border-width: 20px;
+            border-radius: 2vh;
+            border-color: white;
+            background-color: white;
+            width: 400px;
+            height: 300px;
+            }
+            .border-imagecontainer:hover {
+            transition: 0.2s;
+            width: 405px;
+            height: 305px;
+            .videocontainer img {
+            transition: 0.2s;
+            width: 305px;
+            height: 230px;
+            }
+            .videocontainer {
+            font-size: 14px;
+            transition: 0.2s;
+            }
+            }
+            .videolist {
+            backdrop-filter: blur(5vh);
+            width: 450px;
+            height:  100%;
+            }
+            .video-loader {
+            float: top-right;
+            text-align: center;
+            align-items: center;
+            margin-top: 20px;
+            }
+            .video-loader #url {
+            width: 300px;
+            text-align: center;
+            height: 30px;
+            border-radius: 5px;
+            }
+            .video-loader #watch {
+            width: 75px;
+            text-align: center;
+            height: 35px;
+            border-radius: 5px;
+            }
+            .video-loader #iframe {
+            border-radius: 1vh;
+            margin: 15px;
+            background-image: url('logo.png');
+            background-repeat: no-repeat;
+            background-size: 100px;
+            background-position: center;
+            animation: spin 5.0s infinite linear;
+            }
+            @keyframes spin {
+            0% {transform: rotate(360deg);}
+            100% {transform: rotate(360deg);}
+            }
+        </style>
+
+    </head>
+
+    <body>
+        <div class="videolist">
+            <div class="border-imagecontainer">
+
+                <div class="videocontainer">
+
+                    <img src="https://i.ytimg.com/vi/bn0Kh9c4Zv4/hqdefault.jpg"></img>
+                    
+                    <p>7 Days Exploring an Underground City</p>
+                
+                </div>
+                
+            </div>
+
+            <div class="border-imagecontainer">
+
+                <div class="videocontainer">
+
+                    <img src="https://i.ytimg.com/vi/sD2E5mOeD-4/maxresdefault.jpg"></img>
+                    
+                    <p>The RETURN of Skiovox (Hack your Chromebook)</p>
+                
+                </div>
+            
+            </div>
+                        <div class="border-imagecontainer">
+
+                <div class="videocontainer">
+
+                    <img src="https://i.ytimg.com/vi/BfnK_T1qD4U/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLCQLrlQX7Y5gyVbfqikrgWv629hiA"></img>
+                    
+                    <p>12 New Rammerhead Proxy Links</p>
+                
+                </div>
+            
+            </div>
+        </div>
+        <div class="video-loader">
+                <input id="url" placeholder="Enter URL exmp: youtube.com/watch?v=videoid" />
+                <button id="watch">Watch</button>
+                <br />
+                <div class="bg-animation">
+                <iframe id="iframe" src="" height="400" width="600px;" />
+                </div>
+        </div>
+    </body>
+</html>
+<script>
+let url  = document.getElementById('url');
+let watch = document.getElementById('watch');
+
+fucntion watchVid() {
+
+}
+</script>
