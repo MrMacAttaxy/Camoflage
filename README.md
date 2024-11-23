@@ -8,3 +8,8 @@
   <li>Basketball Stars</li>
   <li>And more!</li>
 </ul>
+<hr>
+<h2>What hosting services do we support?</h2>
+<hr>
+<p>We support vercel, dynu (using github forking), heroku, glitch, freedns (using vercel), and almost everything else!</p>
+<hr>
