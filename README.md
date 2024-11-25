@@ -6,7 +6,9 @@
 <ul>
   <li>1v1.lol</li>
   <li>Basketball Stars</li>
-  <li>Proxy</li>
+  <li>Doge/Sylent</li>
+  <li>Asteroid</li>
+  <li>Infared Proxy</li>
   <li>And more!</li>
 </ul>
 <hr>
