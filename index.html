@@ -87,15 +87,16 @@
                 padding: 0;
             }
             .games {
-                margin: 10px;
+                margin: 20px;
                 padding: 0; 
                 width: 45%;
-                height: 550px;
+                height: auto;
                 align-items: center;
                 backdrop-filter: blur(4vh);
                 user-select: none;
                 border-radius: 2vh;
                 box-sizing: border-box;
+                margin-bottom: 50px;
             }
             .gamebtn {
                 user-select: none;
@@ -218,11 +219,12 @@
                 transition: 0.1s;
             }
             .iframe {
-                margin-top: 20px;
+                margin-top: 30px;
                 width: 700px;
                 height: 500px;
                 backdrop-filter: blur(2vh);
                 border-radius: 2vh;
+                box-sizing: border-box;
             }
             #gamewindow {
                 border-radius: 2vh;
@@ -288,22 +290,7 @@
             function gameshow(url) {
             gamewindow.src = url;
             }
-            // Array of words to randomly select from
-            const words = ["lorem", "ipsum", "dolor", "sit", "amet", "consectetur", "adipiscing", "elit", "sed", "do", "eiusmod", "tempor", "incididunt", "ut", "labore", "et", "dolore", "magna", "aliqua", "schoology", "canva", "launchpad", "studentvue"];
-
-            // Function to generate random text
-            function generateRandomText(wordCount) {
-                let text = "";
-                for (let i = 0; i < wordCount; i++) {
-                    const randomIndex = Math.floor(Math.random() * words.length);
-                    text += words[randomIndex] + " ";
-                }
-                return text.trim();
-            }
-
-            // Generate text with a specified number of words and store in a variable
-            let randomTextVariable = generateRandomText(10);
-
+            
             function openFullscreen() {
                 if (gamewindow.requestFullscreen) {
                     gamewindow.requestFullscreen();
