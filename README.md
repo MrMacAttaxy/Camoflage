@@ -8,6 +8,10 @@
   <li>Basketball Stars</li>
   <li>Doge/Sylent</li>
   <li>Asteroid</li>
+  <li>Roblox</li>
+  <li>Crazygames</li>
+  <li>Basketball Stars</li>
+  <li>Prismarine Web Client (Minecraft)</li>
   <li>Infared Proxy</li>
   <li>And more!</li>
 </ul>
