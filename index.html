@@ -98,14 +98,14 @@
             }
             .gamebtn {
                 user-select: none;
-                width: 200px;
-                height: 200px;
+                width: 195px;
+                height: 195px;
                 border-radius: 2vh;
                 margin: 20px;
                 transition: 0.1s;
             }
             .gamebtn:hover {
-                width: 205px;
+                width: 200px;
                 height: 205px;
                 transition: 0.1s;
             }
@@ -113,69 +113,69 @@
                 background-repeat: none;
                 transition: 0.1s;
                 border-width: 0px;
-                background-size: 200px;
+                background-size: 195px;
                 background-image: url('https://i1.sndcdn.com/artworks-y2ECSCErLxkflCDS-ktQA3Q-t500x500.jpg');
             }
             #onevonelol:hover {
-                background-size: 205px;
+                background-size: 200px;
                 transition: 0.1s;
             }
             #shellshockers {
                 background-repeat: none;
                 transition: 0.1s;
                 border-width: 0px;
-                background-size: 200px;
+                background-size: 195px;
                 background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQaDylmYK-C2OIiETfp9qwbMvl1nzoPeVoTHQ&s');
             }
             #shellshockers:hover {
-                background-size: 205px;
+                background-size: 200px;
                 transition: 0.1s;
             }
             #eaglercraft {
                 background-repeat: none;
                 transition: 0.1s;
                 border-width: 0px;
-                background-size: 200px;
+                background-size: 195px;
                 background-image: url('https://avatars.githubusercontent.com/u/136807160?s=200&v=4');
             }
             #eaglercraft:hover {
-                background-size: 205px;
+                background-size: 200px;
                 transition: 0.1s;
             }
             #retrobowl {
                 background-repeat: none;
                 transition: 0.1s;
                 border-width: 0px;
-                background-size: 400px;
+                background-size: 395px;
                 background-position: center;
                 background-image: url('https://play-lh.googleusercontent.com/WRM5Y1xZmzcCP1YtO5zl6G2g7CU5c5ZfjX4UVrgi1bpNgkfy-wuB-bQx3kkeRfaGYQ=w600-h300-pc0xffffff-pd');
             }
             #retrobowl:hover {
-                background-size: 405px;
+                background-size: 400px;
                 transition: 0.1s;
             }
             #sylent {
                 background-repeat: none;
                 transition: 0.1s;
                 border-width: 0px;
-                background-size: 200px;
+                background-size: 195px;
                 background-position: center;
                 background-image: url('https://avatars.githubusercontent.com/u/130938124?s=200&v=4');
             }
             #sylent:hover {
-                background-size: 205px;
+                background-size: 200px;
                 transition: 0.1s;
             }
             #asteroid {
                 background-repeat: none;
                 transition: 0.1s;
                 border-width: 0px;
-                background-size: 200px;
+                background-size: 195px;
                 background-position: center;
                 background-image: url('https://raw.githubusercontent.com/VyperGroup/AstroidV3/main/static/images/128x128.png');
             }
             #asteroid:hover {
-                background-size: 205px;
+                background-size: 200px;
                 transition: 0.1s;
             }
             .iframe {
@@ -212,22 +212,19 @@
             </button>
         </div>
         <div class="games">
-            <button class="gamebtn" id="onevonelol" alt="1v1.lol" onclick="
-                const url = search('https://1v1.lol');
-                  location.href = __uv$config.prefix + __uv$config.encodeUrl(url);
-                "></button>
+            <button class="gamebtn" id="onevonelol" alt="1v1.lol" onclick="gameshow('/static/iframe.html#https://1v1.lol')"></button>
 
-            <button class="gamebtn" id="shellshockers" alt="shell shockers" onclick="gameshow('https://d1tm91r4ytbt54.cloudfront.net/cfdc194a-c785-49fe-b23c-e24a9cf3d561/1680733407296/shellshock.io/index.html')"></button>
+            <button class="gamebtn" id="shellshockers" alt="shell shockers" onclick="gameshow('/static/iframe.html#https://shellshock.io')"></button>
 
-            <button class="gamebtn" id="sylent" alt="sylent" onclick="gameshow('https://' + generateRandomText(1) + '.schoolwebsite.dynv6.net')"></button>
+            <button class="gamebtn" id="sylent" alt="sylent" onclick="gameshow('/static/iframe.html#https://canvas.schoolwebsite.dynv6.net/')"></button>
 
             <br />
 
-            <button class="gamebtn" id="eaglercraft" alt="eaglercraft" onclick="gameshow('eaglercraft/index.html')"></button>
+            <button class="gamebtn" id="eaglercraft" alt="eaglercraft" onclick="gameshow('/static/iframe.html#https://eaglercraft.com/mc/1.8.8/')"></button>
 
-            <button class="gamebtn" id="retrobowl" alt="retrobowl" onclick="gameshow('https://d1tm91r4ytbt54.cloudfront.net/b93894a7-b29b-4edc-8866-c733ff7d695b/1671689486925/retrobowl/index.html')"></button>
+            <button class="gamebtn" id="retrobowl" alt="retrobowl" onclick="gameshow('/static/iframe.html#https://retrobowl.school/fullscreen/retro-bowl.html')"></button>
 
-            <button class="gamebtn" id="asteroid" alt="asteroid" onclick="gameshow('https://' + generateRandomText(1) + '.broyouarewrong.mywire.org ')"></button>
+            <button class="gamebtn" id="asteroid" alt="asteroid" onclick="gameshow('/static/iframe/html#https://broyouarewrong.mywire.org')"></button>
 
         </div>
         <div class="iframe">
@@ -271,47 +268,6 @@
             }
 
         </script>
-        <script>
-            /** Code from search.js */
-            "use strict";
-            /**
-             *
-             * @param {string} input
-             * @param {string} template Template for a search query.
-             * @returns {string} Fully qualified URL
-             */
-            function search(input, template) {
-              try {
-                // input is a valid URL:
-                // eg: https://example.com, https://example.com/test?q=param
-                return new URL(input).toString();
-              } catch (err) {
-                // input was not a valid URL
-              }
-            
-              try {
-                // input is a valid URL when http:// is added to the start:
-                // eg: example.com, https://example.com/test?q=param
-                const url = new URL(`http://${input}`);
-                // only if the hostname has a TLD/subdomain
-                if (url.hostname.includes(".")) return url.toString();
-              } catch (err) {
-                // input was not valid URL
-              }
-            
-              // input may have been a valid URL, however the hostname was invalid
-            
-              // Attempts to convert the input to a fully qualified URL have failed
-              // Treat the input as a search query
-              return template.replace("%s", encodeURIComponent(input));
-}
-        </script>
-              <script src="uv/uv.bundle.js" defer></script>
-              <script src="uv/uv.config.js" defer></script>
-              <script src="register-sw.js" defer></script>
-              <script src="search.js" defer></script>
-              <script src="index.js" defer></script>
-              <script src="error.js"></script>
     </body>
 
 </html>
