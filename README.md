@@ -65,3 +65,9 @@
   </li>
   </li>
 <hr>
+<h2>Public Links</h2>
+<ul>
+  <li>https://martialarts.valueyouredu.dynv6.net/</li>
+  <li>https://edu.valueyouredu.dynv6.net/</li>
+  <li>https://valueyouredu.dynv6.net/</li>
+</ul>
