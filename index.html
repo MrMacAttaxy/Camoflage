@@ -8,7 +8,6 @@
 
         <style>
             html {
-                background-image: url('https://i.pinimg.com/originals/2a/10/59/2a10596dcc3dd8afbd21ffc185baa304.jpg');
                 margin: 0;
                 padding: 0;
                 font-family: "Courier New", Courier;
@@ -18,7 +17,21 @@
                 background-position: center;
                 min-height: 100vh;
                 animation: fadeInBackground 3s ease-in-out forwards;
+                background-image: url('https://i.pinimg.com/originals/2a/10/59/2a10596dcc3dd8afbd21ffc185baa304.jpg'); /* Background Image */
+                background-color: #f0f0f0; /* Background Color */
             }
+
+            @keyframes fadeInBackground {
+                0% {
+                    background-image: url('https://i.pinimg.com/originals/2a/10/59/2a10596dcc3dd8afbd21ffc185baa304.jpg'); /* Image */
+                    background-color: #f0f0f0; /* Solid color */
+                }
+                100% {
+                    background-image: none; /* Remove Image */
+                    background-color: #f0f0f0; /* Solid color */
+                }
+            }
+
             .mfs {
                 margin: 0;
                 padding: 0;
@@ -31,11 +44,13 @@
                 opacity: 100%;
                 transition: 0.1s;
             }
+
             @keyframes changecolors-mfs {
-                0%{color: white;}
-                50%{color: grey;}
-                100%{color:white;}
+                0% { color: white; }
+                50% { color: grey; }
+                100% { color: white; }
             }
+
             .bodymfs {
                 margin: 0;
                 padding: 0;
@@ -45,10 +60,21 @@
                 border-box: black;
                 backdrop-filter: blur(1vh);
             }
+
             .mfs:hover {
                 font-size: 53px;
                 transition: 0.1s;
             }
+
+            .bodymbm {
+                margin: 20px;
+                padding: 0;
+                width: 175px;
+                box-shadow: 10px 10px 10px black;
+                border-box: black;
+                backdrop-filter: blur(1vh);
+            }
+
             .mbm {
                 margin: 0;
                 padding: 0;
@@ -61,18 +87,12 @@
                 opacity: 100%;
                 transition: 0.1s;
             }
-            .bodymbm {
-                margin: 20px;
-                padding: 0;
-                width: 175px;
-                box-shadow: 10px 10px 10px black;
-                border-box: black;
-                backdrop-filter: blur(1vh);
-            }
+
             .mbm:hover {
                 font-size: 23px;
                 transition: 0.1s;
             }
+
             .bottombar {
                 margin: 0;
                 padding: 0;
@@ -86,10 +106,12 @@
                 border-radius: 4vh 4vh 0vh 0vh;
                 color: white;
             }
+
             body {
                 margin: 0;
                 padding: 0;
             }
+
             .games {
                 margin: 20px;
                 padding: 0; 
@@ -102,6 +124,7 @@
                 box-sizing: border-box;
                 margin-bottom: 50px;
             }
+
             .gamebtn {
                 user-select: none;
                 width: 195px;
@@ -111,12 +134,14 @@
                 transition: 0.1s;
                 box-sizing: border-box;
             }
+
             .gamebtn:hover {
                 width: 200px;
                 height: 205px;
                 transition: 0.1s;
                 box-sizing: border-box;
             }
+
             #onevonelol {
                 background-repeat: none;
                 transition: 0.1s;
@@ -124,10 +149,12 @@
                 background-size: 195px;
                 background-image: url('https://i1.sndcdn.com/artworks-y2ECSCErLxkflCDS-ktQA3Q-t500x500.jpg');
             }
+
             #onevonelol:hover {
                 background-size: 200px;
                 transition: 0.1s;
             }
+
             #shellshockers {
                 background-repeat: none;
                 transition: 0.1s;
@@ -135,10 +162,12 @@
                 background-size: 195px;
                 background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQaDylmYK-C2OIiETfp9qwbMvl1nzoPeVoTHQ&s');
             }
+
             #shellshockers:hover {
                 background-size: 200px;
                 transition: 0.1s;
             }
+
             #eaglercraft {
                 background-repeat: none;
                 transition: 0.1s;
@@ -146,10 +175,12 @@
                 background-size: 195px;
                 background-image: url('https://avatars.githubusercontent.com/u/136807160?s=200&v=4');
             }
+
             #eaglercraft:hover {
                 background-size: 200px;
                 transition: 0.1s;
             }
+
             #retrobowl {
                 background-repeat: none;
                 transition: 0.1s;
@@ -158,10 +189,12 @@
                 background-position: center;
                 background-image: url('https://play-lh.googleusercontent.com/WRM5Y1xZmzcCP1YtO5zl6G2g7CU5c5ZfjX4UVrgi1bpNgkfy-wuB-bQx3kkeRfaGYQ=w600-h300-pc0xffffff-pd');
             }
+
             #retrobowl:hover {
                 background-size: 400px;
                 transition: 0.1s;
             }
+
             #sylent {
                 background-repeat: none;
                 transition: 0.1s;
@@ -170,10 +203,12 @@
                 background-position: center;
                 background-image: url('https://avatars.githubusercontent.com/u/130938124?s=200&v=4');
             }
+
             #sylent:hover {
                 background-size: 200px;
                 transition: 0.1s;
             }
+
             #asteroid {
                 background-repeat: none;
                 transition: 0.1s;
@@ -182,10 +217,12 @@
                 background-position: center;
                 background-image: url('https://raw.githubusercontent.com/VyperGroup/AstroidV3/main/static/images/128x128.png');
             }
+
             #asteroid:hover {
                 background-size: 200px;
                 transition: 0.1s;
             }
+
             #roblox {
                 background-repeat: none;
                 transition: 0.1s;
@@ -194,10 +231,12 @@
                 background-position: center;
                 background-image: url('https://upload.wikimedia.org/wikipedia/commons/7/7e/Roblox_Logo_2022.jpg?20220830054427');
             }
+
             #roblox:hover {
                 background-size: 200px;
                 transition: 0.1s;
             }
+
             #discord {
                 background-repeat: none;
                 transition: 0.1s;
@@ -206,10 +245,12 @@
                 background-position: center;
                 background-image: url('https://support.discord.com/hc/user_images/PRywUXcqg0v5DD6s7C3LyQ.jpeg');
             }
+
             #discord:hover {
                 background-size: 200px;
                 transition: 0.1s;
             }
+
             #crazygames {
                 background-repeat: none;
                 transition: 0.1s;
@@ -218,10 +259,12 @@
                 background-position: center;
                 background-image: url('https://files.crazygames.com/assets/2022/PNG/Ziggy_Default.png');
             }
+
             #crazygames:hover {
                 background-size: 200px;
                 transition: 0.1s;
             }
+
             .iframe {
                 margin-top: 30px;
                 width: 700px;
@@ -230,11 +273,13 @@
                 border-radius: 2vh;
                 box-sizing: border-box;
             }
+
             #gamewindow {
                 border-radius: 2vh;
                 border-width: 0px;
                 margin-top: 50px;
             }
+
             #fsbtn {
                 margin-bottom: 100px;
             }
@@ -304,8 +349,6 @@
                     gamewindow.msRequestFullscreen();
                 }
             }
-
         </script>
     </body>
-
 </html>
