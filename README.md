@@ -47,5 +47,17 @@
       <li>Enjoy! <b><i>(It will take 1-5 minutes or longer for the link to start working)</i></b></li>
     </ul>
   </li>
+      <h3>dynV6 and Vercel</h3>
+    <ul>
+      <li>Open dynV6</li>
+      <li>Fork using vercel</li>
+      <li>Go to domains</li>
+      <li>Open dynv6.com and sign up</li>
+      <li>Add a domain, make sure it has not been used by another vercel account before. (or just use your own custom domaininstead of the premade domains)</li>
+      <li>Set the A record as 76.76.21.21, name the subdomain, submit</li>
+      <li>Go back to vercel and copy and paste your link into vercel without the https://or any /'s or pages inside of your link like this example: example.com</li>
+      <li>Enjoy! (It will take 1-3 minutes for it to register)</li>
+    </ul>
+  </li>
   </li>
 <hr>
