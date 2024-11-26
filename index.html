@@ -247,6 +247,45 @@
                 background-size: 200px;
                 transition: 0.1s;
             }
+             #cookieclicker {
+                background-repeat: none;
+                transition: 0.1s;
+                border-width: 0px;
+                background-size: 195px;
+                background-position: center;
+                background-image: url('https://play-lh.googleusercontent.com/7QdF1mILpUj-xtZGzNwECuVHaVKJHobvYh45z9q7hGvCbmjH1oD_ZfRxbEqbB_yb6Dk');
+            }
+
+            #cookieclicker:hover {
+                background-size: 200px;
+                transition: 0.1s;
+            }
+            #basketballstars {
+                background-repeat: none;
+                transition: 0.1s;
+                border-width: 0px;
+                background-size: 195px;
+                background-position: center;
+                background-image: url('https://m.media-amazon.com/images/I/81BL1Hx2KuL.png');
+            }
+
+            #basketballstars:hover {
+                background-size: 200px;
+                transition: 0.1s;
+            }
+            #prismarineclient {
+                background-repeat: none;
+                transition: 0.1s;
+                border-width: 0px;
+                background-size: 195px;
+                background-position: center;
+                background-image: url('https://raw.githubusercontent.com/PrismarineJS/prismarine-web-client/refs/heads/master/assets/favicon.png');
+            }
+
+            #prismarineclient:hover {
+                background-size: 200px;
+                transition: 0.1s;
+            }
 
             .iframe {
                 margin-top: 30px;
@@ -307,10 +346,18 @@
 
             <button class="gamebtn" id="crazygames" alt="crazygames" onclick="gameshow('/static/iframe.html#https://crazygames.com')"></button>
 
+            <br />
+
+            <button class="gamebtn" id="cookieclicker" alt="cookieclicker" onclick="gameshow('/static/iframe.html#https://images-opensocial.googleusercontent.com/gadgets/ifr?container=ig&url=https://cdn.jsdelivr.net/gh/bobydob/JSEngine@e7d53b913d54429e5e118ca9541fb0f8f1f66bdc/dist/cc.xml')"></button>
+
+            <button class="gamebtn" id="basketballstars" alt="basketballstars" onclick="gameshow('/static/iframe.html#https://prefix03568-opensocial.googleusercontent.com/gadgets/ifr?container=ig&url=https://cdn.jsdelivr.net/gh/bobydob/JSEngine@c0c9f32fd575688ff4b14309e9acf19b73f15e2a/build/bs/bs.xml')"></button>
+
+            <button class="gamebtn" id="prismarineclient" alt="prismarineclient" onclick="gameshow('/static/iframe.html#https://mcraft.fun')"></button>
+
         </div>
         <div class="iframe">
             <iframe src="clickgame.html" id="gamewindow" height="400xp" width="550px;"></iframe><br />
-            <button id="fsbtn" onclick="openFullscreen()">Fullscreen</button>
+            <button class="mfs" id="fsbtn" onclick="openFullscreen()">Fullscreen</button>
         </div>
         <div class="bottombar">
             <p>Copyright | Infared 2024</p>
