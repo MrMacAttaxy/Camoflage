@@ -36,5 +36,16 @@
       <li>Go back to vercel and copy and paste your link into vercel without the https://or any /'s or pages inside of your link like.  Exmaple: exmaple.com</li>
       <li>Enjoy! (It will take 1-3 minutes for it to register)</li>
     </ul>
+    <li>
+    <h3>dynV6</h3>
+    <ul>
+      <li>Open dynV6</li>
+      <li>Set cname as [your username].github.io</li>
+      <li>Fork our repo</li>
+      <li>Go to settings -> pages</li>
+      <li>Set your domain that you got from dynu and paste it in the custom domain tab</li>
+      <li>Enjoy! <b><i>(It will take 1-5 minutes or longer for the link to start working)</i></b></li>
+    </ul>
+  </li>
   </li>
 <hr>
