@@ -87,10 +87,10 @@
                 padding: 0;
             }
             .games {
-                margin: 0;
+                margin: 10px;
                 padding: 0; 
                 width: 45%;
-                height: 475px;
+                height: 550px;
                 align-items: center;
                 backdrop-filter: blur(4vh);
                 user-select: none;
@@ -178,6 +178,42 @@
                 background-size: 200px;
                 transition: 0.1s;
             }
+            #roblox {
+                background-repeat: none;
+                transition: 0.1s;
+                border-width: 0px;
+                background-size: 195px;
+                background-position: center;
+                background-image: url('https://upload.wikimedia.org/wikipedia/commons/7/7e/Roblox_Logo_2022.jpg?20220830054427');
+            }
+            #roblox:hover {
+                background-size: 200px;
+                transition: 0.1s;
+            }
+            #discord {
+                background-repeat: none;
+                transition: 0.1s;
+                border-width: 0px;
+                background-size: 195px;
+                background-position: center;
+                background-image: url('https://support.discord.com/hc/user_images/PRywUXcqg0v5DD6s7C3LyQ.jpeg');
+            }
+            #discord:hover {
+                background-size: 200px;
+                transition: 0.1s;
+            }
+            #crazygames {
+                background-repeat: none;
+                transition: 0.1s;
+                border-width: 0px;
+                background-size: 195px;
+                background-position: center;
+                background-image: url('https://files.crazygames.com/assets/2022/PNG/Ziggy_Default.png');
+            }
+            #crazygames:hover {
+                background-size: 200px;
+                transition: 0.1s;
+            }
             .iframe {
                 margin-top: 20px;
                 width: 700px;
@@ -225,6 +261,14 @@
             <button class="gamebtn" id="retrobowl" alt="retrobowl" onclick="gameshow('/static/iframe.html#https://ttfq.github.io/retrobowl/')"></button>
 
             <button class="gamebtn" id="asteroid" alt="asteroid" onclick="gameshow('/static/iframe.html#https://broyouarewrong.mywire.org')"></button>
+
+            <br />
+
+            <button class="gamebtn" id="roblox" alt="roblox" onclick="gameshow('/static/iframe.html#https://nowgg.cloud')"></button>
+
+            <button class="gamebtn" id="discord" alt="discord" onclick="gameshow('/static/iframe.html#https://discord.com')"></button>
+
+            <button class="gamebtn" id="crazygames" alt="crazygames" onclick="gameshow('/static/iframe.html#https://crazygames.com')"></button>
 
         </div>
         <div class="iframe">
