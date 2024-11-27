@@ -64,6 +64,7 @@
     </ul>
   </li>
   </li>
+</ol>
 <hr>
 <h2>Public Links</h2>
 <ul>
@@ -71,3 +72,11 @@
   <li>https://edu.valueyouredu.dynv6.net/</li>
   <li>https://valueyouredu.dynv6.net/</li>
 </ul>
+<hr>
+<h2>Our Discord Ad</h2>
+<p>This is our ad you will see on the advertising page on a discord server, feel free to put this on any server that has an advertising page or allows you to advertise!</p>
+<h3>Infared</h3>
+<p>Infared is the best gaming website you will ever find being updated almost everyday with new games and new apps!</p>
+<p>Join here: https://discord.gg/SHkHX79C</p>
+<p>Or just go to our website directly with the link https://edu.learningpage.dynv6.net/!</p>
+<hr>
