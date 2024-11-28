@@ -78,5 +78,5 @@
 <h3>Infared</h3>
 <p>Infared is the best gaming website you will ever find being updated almost everyday with new games and new apps!</p>
 <p>Join here: https://discord.gg/SHkHX79C</p>
-<p>Or just go to our website directly with the link https://edu.learningpage.dynv6.net/!</p>
+<p>Or just go to our website directly with the link https://edu.learningpage.dynv6.net/ !</p>
 <hr>
