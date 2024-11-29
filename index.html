@@ -127,6 +127,71 @@
             .page-content {
                 flex: 1; /* Fills the remaining space to push the footer down */
             }
+            /* General styling */
+            body {
+                margin: 0;
+                padding: 0;
+                font-family: "Courier New", Courier, monospace;
+                background-image: url('bg.jpg');
+                background-size: cover;
+            }
+            
+            /* Collabs section styling */
+            .collabs {
+                text-align: center;
+                padding: 50px 20px;
+                background: rgba(50, 50, 50, 0.8);
+                color: white;
+                margin: 20px auto;
+                width: 90%;
+                max-width: 800px;
+                border-radius: 10px;
+                box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
+            }
+            
+            .collabs h2 {
+                font-size: 36px;
+                margin-bottom: 20px;
+                text-shadow: 2px 2px 5px black;
+            }
+            
+            .collab-list {
+                display: flex;
+                justify-content: center;
+                gap: 40px;
+                flex-wrap: wrap;
+            }
+            
+            .collab {
+                text-align: center;
+                width: 150px;
+                padding: 10px;
+                background: rgba(255, 255, 255, 0.1);
+                border-radius: 10px;
+                box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+                transition: transform 0.3s, box-shadow 0.3s;
+            }
+            
+            .collab img {
+                width: 100px;
+                height: 100px;
+                margin-bottom: 10px;
+                border-radius: 50%;
+                box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
+            }
+            
+            .collab p {
+                font-size: 18px;
+                font-weight: bold;
+                color: #ff6384;
+                text-shadow: 1px 1px 3px black;
+            }
+            
+            .collab:hover {
+                transform: scale(1.1);
+                box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.8);
+            }
+
         </style>
     </head>
     <body>
@@ -152,7 +217,19 @@
                 </div>
             </center>
         </div>
-
+        <section class="collabs">
+            <h2>Collaborations</h2>
+            <div class="collab-list">
+                <div class="collab">
+                    <img src="https://camo.githubusercontent.com/ce6679f7e38368e679fd76b2a269ba7e74f67592599c288378622005192d3cb1/68747470733a2f2f63646e2e646973636f72646170702e636f6d2f6174746163686d656e74732f313330353733373636303436333138353935322f313331313930313332393039383134393931382f547572626f5f2d5f312e706e673f65783d36373461386164322669733d363734393339353226686d3d6330663438353532343935656666356130653262636563343564383962303036643834326236366135646466356138663566356436663365326432376130636526" alt="Turbo-X">
+                    <p>Linkmasters!</p>
+                </div>
+                <div class="collab">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTDZmTeiTF8xcq-zsq2NFXMNgu26PaJ4g275Q&s" alt="SkipSchool Proxies">
+                    <p>SkipSchool Proxies</p>
+                </div>
+            </div>
+        </section>
         <!-- Bottom bar -->
         <div class="bottombar">
             <p>Copyright | Infared 2024</p>
