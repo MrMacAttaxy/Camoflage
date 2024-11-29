@@ -1,4 +1,5 @@
 <h1>Infared</h1>
+<h3><b>Make sure that if you fork this repo then you star the repo!</b></h3>
 <hr>
 <p>This project was made for you to play games for free!</p>
 <hr>
@@ -76,7 +77,54 @@
 <h2>Our Discord Ad</h2>
 <p>This is our ad you will see on the advertising page on a discord server, feel free to put this on any server that has an advertising page or allows you to advertise!</p>
 <h3>Infared</h3>
-<p>Infared is the best gaming website you will ever find being updated almost everyday with new games and new apps!</p>
-<p>Join here: https://discord.gg/SHkHX79C</p>
-<p>Or just go to our website directly with the link https://edu.learningpage.dynv6.net/ !</p>
+<p>
+  <br />
+  🎮 Unblock. Play. Win. 🚀
+<br />
+  Tired of boring school restrictions? Unlock games and fun anytime with Infared!
+<br />
+  🔥 Why Join?
+<br />
+  🕹️ Play epic games: 1v1.lol, Basketball Stars, Roblox, Minecraft, & more!
+<br />
+  🌐 Infared Proxy to surf & game freely.
+<br />
+  🛠️ Guides to create custom unblocked links for you and your friends!
+<br />
+  🌟 Updated daily with new games & tools.
+<br />
+<br />
+  🔗 Quick Links:
+<br />
+  🌐 Website: https://edu.learningpage.dynv6.net/
+  💬 Discord: https://discadia.com/ubg/
+<br />
+  <b>Don’t wait—unlock the fun now!</b>
+</p>
+<h3>Paste this code instead</h3>
+<p>
+  # Infared
+<br />
+  🎮 Unblock. Play. Win. 🚀
+<br />
+  Tired of boring school restrictions? Unlock games and fun anytime with Infared!
+<br />
+  🔥 Why Join?
+<br />
+  🕹️ Play epic games: 1v1.lol, Basketball Stars, Roblox, Minecraft, & more!
+<br />
+  🌐 Infared Proxy to surf & game freely.
+<br />
+  🛠️ Guides to create custom unblocked links for you and your friends!
+<br />
+  🌟 Updated daily with new games & tools.
+<br />
+<br />
+  🔗 Quick Links:
+<br />
+  🌐 Website: https://edu.learningpage.dynv6.net/
+  💬 Discord: https://discadia.com/ubg/
+<br />
+  **Don’t wait—unlock the fun now!**
+</p>
 <hr>
