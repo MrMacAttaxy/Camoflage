@@ -72,6 +72,7 @@
   <li>https://martialarts.valueyouredu.dynv6.net/</li>
   <li>https://edu.valueyouredu.dynv6.net/</li>
   <li>https://valueyouredu.dynv6.net/</li>
+  <p><i>Find more at: https://discadia.com/ubg/</i></p>
 </ul>
 <hr>
 <h2>Our Discord Ad</h2>
