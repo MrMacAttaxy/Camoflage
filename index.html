@@ -144,21 +144,32 @@
             }
 
             .collab-list {
-                display: flex;
-                justify-content: center;
-                gap: 40px;
-                flex-wrap: wrap;
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+                justify-items: center;
+                gap: 20px;
+                margin: 0 auto;
+                padding: 20px;
+                width: 100%;
             }
-
+            
             .collab {
                 text-align: center;
-                width: 150px;
                 padding: 10px;
                 background: rgba(255, 255, 255, 0.1);
                 border-radius: 10px;
                 box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
                 transition: transform 0.3s, box-shadow 0.3s;
             }
+            
+            .collab img {
+                width: 100px;
+                height: 100px;
+                margin-bottom: 10px;
+                border-radius: 50%;
+                box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
+            }
+
 
             .collab img {
                 width: 100px;
