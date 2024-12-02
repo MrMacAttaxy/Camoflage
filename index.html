@@ -11,12 +11,16 @@
                 font-family: "Courier New", Courier;
                 min-height: 100%;
                 background-image: url('bg.jpg');
+                background-size: cover;
             }
 
             body {
                 display: flex;
                 flex-direction: column;
+                position: relative;
+                min-height: 100vh;
             }
+
             .navbar {
                 background-color: rgba(50, 50, 50, 0.8);
                 padding: 10px 0;
@@ -55,6 +59,7 @@
                 transform: scale(1.2);
                 text-shadow: 0px 0px 5px rgba(255, 255, 255, 0.8);
             }
+
             .bodymfs {
                 margin: 50px auto;
                 width: 400px;
@@ -102,6 +107,7 @@
                 font-size: 23px;
                 transition: 0.1s;
             }
+
             .bottombar {
                 margin: 0;
                 padding: 10px 0;
@@ -109,24 +115,16 @@
                 color: white;
                 text-align: center;
                 font-size: 14px;
-                position: absolute;
-                bottom: 0;
                 width: 100%;
                 border-radius: 4vh 4vh 0 0;
                 box-shadow: 0px -2px 10px rgba(0, 0, 0, 0.5);
             }
+
             .page-content {
                 flex: 1;
+                padding-bottom: 60px;
             }
-            /* General styling */
-            body {
-                margin: 0;
-                padding: 0;
-                font-family: "Courier New", Courier, monospace;
-                background-image: url('bg.jpg');
-                background-size: cover;
-            }
-            
+
             .collabs {
                 text-align: center;
                 padding: 50px 20px;
@@ -138,20 +136,20 @@
                 border-radius: 10px;
                 box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
             }
-            
+
             .collabs h2 {
                 font-size: 36px;
                 margin-bottom: 20px;
                 text-shadow: 2px 2px 5px black;
             }
-            
+
             .collab-list {
                 display: flex;
                 justify-content: center;
                 gap: 40px;
                 flex-wrap: wrap;
             }
-            
+
             .collab {
                 text-align: center;
                 width: 150px;
@@ -161,7 +159,7 @@
                 box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
                 transition: transform 0.3s, box-shadow 0.3s;
             }
-            
+
             .collab img {
                 width: 100px;
                 height: 100px;
@@ -169,18 +167,19 @@
                 border-radius: 50%;
                 box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
             }
-            
+
             .collab p {
                 font-size: 18px;
                 font-weight: bold;
                 color: #ff6384;
                 text-shadow: 1px 1px 3px black;
             }
-            
+
             .collab:hover {
                 transform: scale(1.1);
                 box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.8);
             }
+
             .about-infared {
                 text-align: center;
                 padding: 50px 20px;
@@ -192,7 +191,7 @@
                 border-radius: 10px;
                 box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.7);
             }
-            
+
             .about-infared h2 {
                 font-size: 36px;
                 margin-bottom: 20px;
@@ -200,7 +199,7 @@
                 text-shadow: 2px 2px 5px black;
                 animation: glow-text 2s infinite alternate;
             }
-            
+
             .about-content {
                 font-size: 18px;
                 line-height: 1.8;
@@ -211,26 +210,27 @@
                 box-shadow: 0px 0px 15px rgba(255, 255, 255, 0.2);
                 transition: transform 0.3s, box-shadow 0.3s;
             }
-            
+
             .about-content p {
                 color: white;
                 text-shadow: 1px 1px 3px black;
             }
-            
+
             .about-content strong {
                 color: #ff6384;
                 text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8);
             }
-            
+
             .about-content em {
                 color: lightblue;
                 font-style: italic;
             }
-            
+
             .about-content:hover {
                 transform: scale(1.05);
                 box-shadow: 0px 0px 25px rgba(255, 255, 255, 0.7);
             }
+
             @keyframes glow-text {
                 from {
                     text-shadow: 2px 2px 10px rgba(255, 99, 132, 0.8);
@@ -239,22 +239,18 @@
                     text-shadow: 2px 2px 20px rgba(255, 99, 132, 1);
                 }
             }
-
         </style>
     </head>
     <body>
-        <!-- Navbar -->
         <nav class="navbar">
             <ul class="nav-links">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="games.html">Games</a></li>
-                <li><a href="static/index.html">Search</a></li>
-                <li><a href="static/iframe.html#https://moonlight.silvereen.net/forum/">Moonlight Forums</a></li>
-                <li><a href="static/iframe.html#https://smoresxo.shop/proxies">SkipSchool Proxies</a></li>
+                <li><a href="/">Home</a></li>
+                <li><a href="/games.html">Games</a></li>
+                <li><a href="/static/index.html">Search</a></li>
+                <li><a href="/static/iframe.html#https://moonlight.silvereen.net/forum/">Moonlight Forums</a></li>
+                <li><a href="/static/iframe.html#https://smoresxo.shop/proxies">SkipSchool Proxies</a></li>
             </ul>
         </nav>
-
-        <!-- Main content -->
         <div class="page-content">
             <center>
                 <div class="bodymfs">
@@ -264,26 +260,26 @@
                     <p class="mbm">Made by MrMacAttaxy</p>
                 </div>
             </center>
-        </div>
-        <section class="collabs">
-            <h2>Collaborations</h2>
-            <div class="collab-list">
-                <div class="collab">
-                    <img src="https://camo.githubusercontent.com/ce6679f7e38368e679fd76b2a269ba7e74f67592599c288378622005192d3cb1/68747470733a2f2f63646e2e646973636f72646170702e636f6d2f6174746163686d656e74732f313330353733373636303436333138353935322f313331313930313332393039383134393931382f547572626f5f2d5f312e706e673f65783d36373461386164322669733d363734393339353226686d3d6330663438353532343935656666356130653262636563343564383962303036643834326236366135646466356138663566356436663365326432376130636526" alt="Turbo-X">
-                    <p>Linkmasters!</p>
-                </div>
-                <div class="collab">
-                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTDZmTeiTF8xcq-zsq2NFXMNgu26PaJ4g275Q&s" alt="SkipSchool Proxies">
-                    <p>SkipSchool Proxies</p>
-                </div>
-                <section class="about-infared">
-                    <h2>About Infared</h2>
-                    <div class="about-content">
-                        <p>Welcome to <strong>Infared</strong>, your gateway to unblocked games and seamless online access! With proxy support powered by collaborations with <em>Linkmasters</em> and <em>SkipSchool</em>, we offer a fast, secure way to enjoy a huge selection of games. Join our Discord to connect with players, discover new games, and stay updated. <strong>Infared</strong>—unblock the fun!</p>
+            <section class="collabs">
+                <h2>Collaborations</h2>
+                <div class="collab-list">
+                    <div class="collab">
+                        <img src="https://camo.githubusercontent.com/ce6679f7e38368e679fd76b2a269ba7e74f67592599c288378622005192d3cb1/68747470733a2f2f63646e2e646973636f72646170702e636f6d2f6174746163686d656e74732f313330353733373636303436333138353935322f313331313930313332393039383134393931382f547572626f5f2d5f312e706e673f65783d36373461386164322669733d363734393339353226686d3d6330663438353532343935656666356130653262636563343564383962303036643834326236366135646466356138663566356436663365326432376130636526" alt="Turbo-X">
+                        <p>Linkmasters!</p>
                     </div>
-                </section>
-            </div>
-        </section>
+                    <div class="collab">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTDZmTeiTF8xcq-zsq2NFXMNgu26PaJ4g275Q&s" alt="SkipSchool Proxies">
+                        <p>SkipSchool Proxies</p>
+                    </div>
+                </div>
+            </section>
+            <section class="about-infared">
+                <h2>About Infared</h2>
+                <div class="about-content">
+                    <p>Welcome to <strong>Infared</strong>, your gateway to unblocked games and seamless online access! With proxy support powered by collaborations with <em>Linkmasters</em> and <em>SkipSchool</em>, we offer a fast, secure way to enjoy a huge selection of games. Join our Discord to connect with players, discover new games, and stay updated. <strong>Infared</strong>—unblock the fun!</p>
+                </div>
+            </section>
+        </div>
         <div class="bottombar">
             <p>Copyright | Infared 2024 | Disc: <a href="https://discadia.com/ubg/">https://discadia.com/ubg/</a></p>
             <p>Background Drawn by Prawny - Posted on Pixabay</p>
