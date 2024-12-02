@@ -5,7 +5,6 @@
         <link rel="icon" type="image/x-icon" href="favicon.png">
         <title>Infared</title>
         <style>
-            /* General page styling */
             html, body {
                 margin: 0;
                 padding: 0;
@@ -18,8 +17,6 @@
                 display: flex;
                 flex-direction: column;
             }
-
-            /* Navbar styles */
             .navbar {
                 background-color: rgba(50, 50, 50, 0.8);
                 padding: 10px 0;
@@ -58,8 +55,6 @@
                 transform: scale(1.2);
                 text-shadow: 0px 0px 5px rgba(255, 255, 255, 0.8);
             }
-
-            /* Header and content styling */
             .bodymfs {
                 margin: 50px auto;
                 width: 400px;
@@ -107,8 +102,6 @@
                 font-size: 23px;
                 transition: 0.1s;
             }
-
-            /* Bottom bar styling */
             .bottombar {
                 margin: 0;
                 padding: 10px 0;
@@ -122,10 +115,8 @@
                 border-radius: 4vh 4vh 0 0;
                 box-shadow: 0px -2px 10px rgba(0, 0, 0, 0.5);
             }
-
-            /* Ensures the content pushes footer to the bottom for short pages */
             .page-content {
-                flex: 1; /* Fills the remaining space to push the footer down */
+                flex: 1;
             }
             /* General styling */
             body {
@@ -136,7 +127,6 @@
                 background-size: cover;
             }
             
-            /* Collabs section styling */
             .collabs {
                 text-align: center;
                 padding: 50px 20px;
@@ -191,6 +181,64 @@
                 transform: scale(1.1);
                 box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.8);
             }
+            .about-infared {
+                text-align: center;
+                padding: 50px 20px;
+                margin: 20px auto;
+                width: 90%;
+                max-width: 800px;
+                background: linear-gradient(to bottom right, rgba(50, 50, 50, 0.9), rgba(30, 30, 30, 0.9));
+                color: white;
+                border-radius: 10px;
+                box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.7);
+            }
+            
+            .about-infared h2 {
+                font-size: 36px;
+                margin-bottom: 20px;
+                color: #ff6384;
+                text-shadow: 2px 2px 5px black;
+                animation: glow-text 2s infinite alternate;
+            }
+            
+            .about-content {
+                font-size: 18px;
+                line-height: 1.8;
+                font-family: "Courier New", Courier, monospace;
+                padding: 20px;
+                border-radius: 10px;
+                background: rgba(255, 255, 255, 0.1);
+                box-shadow: 0px 0px 15px rgba(255, 255, 255, 0.2);
+                transition: transform 0.3s, box-shadow 0.3s;
+            }
+            
+            .about-content p {
+                color: white;
+                text-shadow: 1px 1px 3px black;
+            }
+            
+            .about-content strong {
+                color: #ff6384;
+                text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8);
+            }
+            
+            .about-content em {
+                color: lightblue;
+                font-style: italic;
+            }
+            
+            .about-content:hover {
+                transform: scale(1.05);
+                box-shadow: 0px 0px 25px rgba(255, 255, 255, 0.7);
+            }
+            @keyframes glow-text {
+                from {
+                    text-shadow: 2px 2px 10px rgba(255, 99, 132, 0.8);
+                }
+                to {
+                    text-shadow: 2px 2px 20px rgba(255, 99, 132, 1);
+                }
+            }
 
         </style>
     </head>
@@ -228,9 +276,14 @@
                     <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTDZmTeiTF8xcq-zsq2NFXMNgu26PaJ4g275Q&s" alt="SkipSchool Proxies">
                     <p>SkipSchool Proxies</p>
                 </div>
+                <section class="about-infared">
+                    <h2>About Infared</h2>
+                    <div class="about-content">
+                        <p>Welcome to <strong>Infared</strong>, your gateway to unblocked games and seamless online access! With proxy support powered by collaborations with <em>Linkmasters</em> and <em>SkipSchool</em>, we offer a fast, secure way to enjoy a huge selection of games. Join our Discord to connect with players, discover new games, and stay updated. <strong>Infared</strong>—unblock the fun!</p>
+                    </div>
+                </section>
             </div>
         </section>
-        <!-- Bottom bar -->
         <div class="bottombar">
             <p>Copyright | Infared 2024 | Disc: <a href="https://discadia.com/ubg/">https://discadia.com/ubg/</a></p>
             <p>Background Drawn by Prawny - Posted on Pixabay</p>
