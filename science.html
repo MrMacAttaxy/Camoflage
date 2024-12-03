@@ -73,9 +73,57 @@
                 background-position: center;
                 background-color: white;
             }
+            .navbar {
+                background-color: rgba(50, 50, 50, 0.8);
+                padding: 10px 0;
+                border-bottom: 2px solid black;
+                box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+                position: sticky;
+                top: 0;
+                z-index: 1000;
+            }
+
+            .nav-links {
+                list-style: none;
+                display: flex;
+                justify-content: center;
+                gap: 20px;
+                margin: 0;
+                padding: 0;
+            }
+
+            .nav-links li {
+                display: inline;
+            }
+
+            .nav-links li a {
+                text-decoration: none;
+                font-family: "Courier New", Courier, monospace;
+                font-size: 20px;
+                color: white;
+                padding: 5px 10px;
+                transition: all 0.3s ease;
+            }
+
+            .nav-links li a:hover {
+                font-size: 24px;
+                color: #ff6384;
+                transform: scale(1.2);
+                text-shadow: 0px 0px 5px rgba(255, 255, 255, 0.8);
+            }
         </style>
     </head>
     <body>
+          <nav class="navbar">
+            <ul class="nav-links">
+                <li><a href="/">Home</a></li>
+                <li><a href="/games.html">Games</a></li>
+                <li><a href="/static/index.html">Search</a></li>
+                <li><a href="/static/iframe.html#https://moonlight.silvereen.net/forum/">Moonlight Forums</a></li>
+                <li><a href="/static/iframe.html#https://smoresxo.shop/proxies">SkipSchool Proxies</a></li>
+                <li><a href="/science.html">Watch Youtube</a></li>
+            </ul>
+        </nav>
         <div class="videolist">
             <div onclick="output.src = '/static/iframe.html#https://www.youtube-nocookie.com/embed/bn0Kh9c4Zv4'">
             <div class="border-imagecontainer">
