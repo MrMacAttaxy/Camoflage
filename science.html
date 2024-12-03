@@ -77,7 +77,7 @@
     </head>
     <body>
         <div class="videolist">
-            <div onclick="output.src = 'https://www.youtube-nocookie.com/embed/bn0Kh9c4Zv4'">
+            <div onclick="output.src = '/static/iframe.html#https://www.youtube-nocookie.com/embed/bn0Kh9c4Zv4'">
             <div class="border-imagecontainer">
                 <div class="videocontainer">
                     <img src="https://i.ytimg.com/vi/bn0Kh9c4Zv4/hqdefault.jpg" />
@@ -85,7 +85,7 @@
                 </div>
             </div>
         </div>
-        <div onclick="output.src = 'https://youtube-nocookie.com/embed/sD2E5mOeD-4'">
+        <div onclick="output.src = '/static/iframe.html#https://youtube-nocookie.com/embed/sD2E5mOeD-4'">
             <div class="border-imagecontainer">
                 <div class="videocontainer">
                     <img src="https://i.ytimg.com/vi/sD2E5mOeD-4/maxresdefault.jpg" />
@@ -96,7 +96,7 @@
 
             <div class="border-imagecontainer">
                 <div class="videocontainer">
-                    <img src="https://i.ytimg.com/vi/BfnK_T1qD4U/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLCQLrlQX7Y5gyVbfqikrgWv629hiA" />
+                    <img src="/static/iframe.html#https://i.ytimg.com/vi/BfnK_T1qD4U/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLCQLrlQX7Y5gyVbfqikrgWv629hiA" />
                     <p>12 New Rammerhead Proxy Links</p>
                 </div>
             </div>
@@ -121,7 +121,7 @@
         let urlObj = new URL(videoUrl);
         let videoId = urlObj.searchParams.get("v");
         if (videoId) {
-            output.src = `https://www.youtube-nocookie.com/embed/${videoId}`;
+            output.src = `/static/iframe.html#https://www.youtube-nocookie.com/embed/${videoId}`;
         } else {
             alert("Invalid YouTube URL. Please ensure it includes 'watch?v=videoid'.");
         }
