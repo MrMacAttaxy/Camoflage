@@ -341,21 +341,7 @@
                 background-size: 200px;
                 transition: 0.1s;
             }
-            .iframe {
-                margin-top: 30px;
-                width: 700px;
-                height: 500px;
-                backdrop-filter: blur(2vh);
-                border-radius: 2vh;
-                box-sizing: border-box;
-            }
-
-            #gamewindow {
-                border-radius: 2vh;
-                border-width: 0px;
-                margin-top: 50px;
-            }
-
+            
             #fsbtn {
                 margin-bottom: 100px;
             }
@@ -461,10 +447,6 @@
             <button class="gamebtn" id="android" alt="android" onclick="gameshow('/static/iframe.html#https://appetize.io/embed/b_vedi2qzapdi6b3feobso6vyrvi')"></button>
 
         </div>
-        <div class="iframe">
-            <iframe src="clickgame.html" id="i" height="400xp" width="550px;"></iframe><br />
-            <button style="font-size: 25px;" class="mfs" id="fsbtn" onclick="openFullscreen()">Fullscreen</button>
-        </div>
         <div class="bottombar">
             <p>Copyright | Infared 2024 | Disc: <a href="https://discadia.com/ubg/">https://discadia.com/ubg/</a></p>
             <p>Background Drawn by Prawny - Posted on Pixabay</p>
@@ -474,7 +456,7 @@
             const gamewindow = document.getElementById("i");
 
             function gameshow(url) {
-            gamewindow.src = url;
+            window.location.href = url;
             }
             
             function openFullscreen() {
