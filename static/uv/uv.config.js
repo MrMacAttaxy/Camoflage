@@ -1,5 +1,5 @@
 self.__uv$config = {
-    prefix: '/static/tiw/',
+    prefix: '/mathpage/search/',
     bare:'https://bare.benrogo.net',
     encodeUrl: Ultraviolet.codec.xor.encode,
     decodeUrl: Ultraviolet.codec.xor.decode,
