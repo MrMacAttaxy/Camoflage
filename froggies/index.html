@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+      <link rel="stylesheet" href="/static/index.css">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+      <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
+   </head>
+   <body>
+      <nav class="navbar">
+            <ul class="nav-links">
+                <li><a href="/">Home</a></li>
+                <li><a href="/games.html">Games</a></li>
+                <li><a href="/static/index.html">Search</a></li>
+                <li><a href="/static/iframe.html#https://moonlight.silvereen.net/forum/">Moonlight Forums</a></li>
+                <li><a href="/static/iframe.html#https://smoresxo.shop/proxies">SkipSchool Proxies</a></li>
+                <li><a href="/science.html">Watch Youtube</a></li>
+            </ul>
+        </nav>
+      <div id="header">
+         <img style="border-radius: 5px; border-style: ridge; border-color: white; border-radius: 100vh; margin: 35px;" width="75px" height="75px;"src="/favicon.png">
+      </div>
+      <div id="content">
+         <h1>Search the Web <i>without restrictions</i></h1>
+
+         <form id="uv-form">
+            <input style="border-radius: 5vh;" id="uv-search-engine" value="https://www.google.com/search?q=%s" type="hidden"/> 
+            <input style="border-radius: 5vh;" id="uv-address" type="text" placeholder="Search Google or type an URL" class="form__input"/>
+          </form>
+          <div class="desc left-margin">
+            <p id="uv-error"></p>
+            <pre id="uv-error-code"></pre>
+          </div>
+      </div>
+      <script src="uv/uv.bundle.js" defer></script>
+      <script src="uv/uv.config.js" defer></script>
+      <script src="register-sw.js" defer></script>
+      <script src="search.js" defer></script>
+      <script src="index.js" defer></script>
+      <script src="error.js"></script>
+      <div class="bottombar">
+            <p>Copyright | Infared 2024 | Disc: <a href="https://discadia.com/ubg/">https://discadia.com/ubg/</a></p>
+            <p>Background Drawn by Prawny - Posted on Pixabay</p>
+        </div>
+   </body>
+</html>
