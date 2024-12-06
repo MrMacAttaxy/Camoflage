@@ -1,5 +1,5 @@
 self.__uv$config = {
-    prefix: '/static/tiw',
+    prefix: '/froggies/uv',
     bare:'hhttps://bare.frogiesarcade.workers.dev/',
     encodeUrl: Ultraviolet.codec.xor.encode,
     decodeUrl: Ultraviolet.codec.xor.decode,
