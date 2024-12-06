@@ -1,6 +1,6 @@
 /* Custom CSS for black theme */
 body {
-  background-image: url('bg.jpg');
+  background-image: url('/bg.jpg');
   background-size: 100%;
   color: #fff;
   margin: 0;
@@ -49,14 +49,14 @@ body {
 .form__input {
   padding: 10px;
   border: none;
-  border-radius: 5px;
   font-size: 16px;
   width: 300px;
   box-shadow: 0 0 5px rgba(255, 255, 255, 0.3);
-  background-color: #222;
+  background-color: #000;
   text-align: center;
-  color: #fff;
-  cursor:cell;
+  color: purple;
+  border-radius: 5px;
+  transition: 0.4s;
 }
 
 a{
@@ -80,6 +80,8 @@ a{
 }
 
 .form__input:focus {
+  transition: 0.4s;
+  width: 350px;
   outline: none;
   box-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
 }
