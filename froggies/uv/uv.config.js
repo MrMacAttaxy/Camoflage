@@ -1,6 +1,6 @@
 self.__uv$config = {
     prefix: '/froggies/uv',
-    bare:'hhttps://bare.frogiesarcade.workers.dev/',
+    bare:'https://bare.frogiesarcade.workers.dev/',
     encodeUrl: Ultraviolet.codec.xor.encode,
     decodeUrl: Ultraviolet.codec.xor.decode,
     handler: '/froggies/uv/uv.handler.js',
