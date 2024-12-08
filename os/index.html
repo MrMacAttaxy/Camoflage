@@ -20,6 +20,61 @@
       overflow: hidden;
     }
 
+    /* Loading Screen */
+    #loading-screen {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(120deg, #1e1e1e, #3d4148);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      z-index: 10000;
+    }
+
+    #loading-text {
+      font-size: 2rem;
+      margin-bottom: 20px;
+      animation: fadeIn 2s infinite alternate;
+    }
+
+    #loading-bar {
+      width: 60%;
+      height: 10px;
+      background: #444;
+      border-radius: 5px;
+      overflow: hidden;
+      position: relative;
+    }
+
+    #loading-bar-inner {
+      width: 0;
+      height: 100%;
+      background: linear-gradient(90deg, #f04747, #fca311);
+      animation: loadProgress 3s forwards ease-out;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0.5;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+
+    @keyframes loadProgress {
+      from {
+        width: 0;
+      }
+      to {
+        width: 100%;
+      }
+    }
+
     /* Taskbar */
     #taskbar {
       position: fixed;
@@ -191,140 +246,68 @@
   </style>
 </head>
 <body>
-  <!-- Taskbar -->
-  <div id="taskbar">
-    <div class="taskbar-item" onclick="toggleAppDrawer()">🔽 Apps</div>
-    <div class="taskbar-item" onclick="openApp('browser')">Browser</div>
-  </div>
-
-  <!-- App Drawer -->
-  <div id="app-drawer">
-    <div class="drawer-header">
-      <h2>App Drawer</h2>
-    </div>
-    <div class="drawer-section">
-      <h3>Installed Apps</h3>
-      <div id="installed-apps">
-        <p>No apps installed yet. Go to the Play Store to download apps.</p>
-      </div>
-    </div>
-    <div class="drawer-section">
-      <h3>Play Store</h3>
-      <div class="drawer-item" onclick="installApp('YouTube', 'https://www.youtube.com')">YouTube</div>
-      <div class="drawer-item" onclick="installApp('Spotify', 'https://open.spotify.com')">Spotify</div>
-      <div class="drawer-item" onclick="installApp('Minecraft', 'https://mcraft.fun')">Minecraft</div>
-      <div class="drawer-item" onclick="installApp('Shellshock.io', 'https://shellshock.io')">Shellshock.io</div>
-      <div class="drawer-item" onclick="installApp('1v1.lol', 'https://1v1.lol')">1v1.lol</div>
+  <!-- Loading Screen -->
+  <div id="loading-screen">
+    <div id="loading-text">Loading InfaredOS...</div>
+    <div id="loading-bar">
+      <div id="loading-bar-inner"></div>
     </div>
   </div>
 
-  <!-- Browser -->
-  <div id="browser" class="app">
-    <div class="title-bar" onmousedown="startDrag(event, 'browser')">
-      <span>Browser</span>
-      <div>
-        <button onclick="toggleFullscreen('browser')">🖵</button>
-        <button onclick="closeApp('browser')">X</button>
+  <!-- Main Interface -->
+  <div id="os-interface" style="display: none;">
+    <!-- Taskbar -->
+    <div id="taskbar">
+      <div class="taskbar-item" onclick="toggleAppDrawer()">Apps</div>
+      <div class="taskbar-item" onclick="openApp('browser')">Browser</div>
+    </div>
+
+    <!-- App Drawer -->
+    <div id="app-drawer">
+      <div class="drawer-header">
+        <h2>App Drawer</h2>
+      </div>
+      <div class="drawer-section">
+        <h3>Installed Apps</h3>
+        <div id="installed-apps">
+          <p>No apps installed yet. Go to the Play Store to download apps.</p>
+        </div>
+      </div>
+      <div class="drawer-section">
+        <h3>Play Store</h3>
+        <div class="drawer-item" onclick="installApp('YouTube', 'https://www.youtube.com')">YouTube</div>
+        <div class="drawer-item" onclick="installApp('Spotify', 'https://open.spotify.com')">Spotify</div>
+        <div class="drawer-item" onclick="installApp('Minecraft', 'https://mcraft.fun')">Minecraft</div>
+        <div class="drawer-item" onclick="installApp('Shellshock.io', 'https://shellshock.io')">Shellshock.io</div>
+        <div class="drawer-item" onclick="installApp('1v1.lol', 'https://1v1.lol')">1v1.lol</div>
       </div>
     </div>
-    <div class="app-content">
-      <div class="browser-input">
-        <input id="browser-url" type="text" placeholder="Enter URL here">
-        <button onclick="loadProxy()">🔍</button>
+
+    <!-- Browser -->
+    <div id="browser" class="app">
+      <div class="title-bar" onmousedown="startDrag(event, 'browser')">
+        <span>Browser</span>
+        <div>
+          <button onclick="toggleFullscreen('browser')">🖵</button>
+          <button onclick="closeApp('browser')">X</button>
+        </div>
       </div>
-      <iframe id="browser-iframe" src="" style="width: 100%; height: 100%; border: none;"></iframe>
+      <div class="app-content">
+        <div class="browser-input">
+          <input id="browser-url" type="text" placeholder="Enter URL here">
+          <button onclick="loadProxy()">🔍</button>
+        </div>
+        <iframe id="browser-iframe" src="" style="width: 100%; height: 100%; border: none;"></iframe>
+      </div>
     </div>
   </div>
 
   <script>
-    const appDrawer = document.getElementById('app-drawer');
-    const installedAppsSection = document.getElementById('installed-apps');
-
-    function toggleAppDrawer() {
-      appDrawer.classList.toggle('open');
-    }
-
-    function installApp(name, url) {
-      const appId = name.toLowerCase().replace(/\s+/g, '-');
-      if (document.getElementById(appId)) {
-        alert(`${name} is already installed.`);
-        return;
-      }
-
-      const proxyUrl = `/static/iframe.html#${url}`;
-
-      // Create App in the Installed Apps Section
-      const installedApp = document.createElement('div');
-      installedApp.className = 'drawer-item';
-      installedApp.textContent = name;
-      installedApp.onclick = () => openApp(appId);
-      installedAppsSection.innerHTML = '';
-      installedAppsSection.appendChild(installedApp);
-
-      // Create App Window
-      const newApp = document.createElement('div');
-      newApp.id = appId;
-      newApp.classList.add('app');
-      newApp.innerHTML = `
-        <div class="title-bar" onmousedown="startDrag(event, '${appId}')">
-          <span>${name}</span>
-          <div>
-            <button onclick="toggleFullscreen('${appId}')">🖵</button>
-            <button onclick="closeApp('${appId}')">X</button>
-          </div>
-        </div>
-        <iframe src="${proxyUrl}" class="app-content"></iframe>
-      `;
-      document.body.appendChild(newApp);
-    }
-
-    function openApp(appId) {
-      const app = document.getElementById(appId);
-      app.style.display = 'flex';
-    }
-
-    function closeApp(appId) {
-      const app = document.getElementById(appId);
-      app.style.display = 'none';
-    }
-
-    function toggleFullscreen(appId) {
-      const app = document.getElementById(appId);
-      app.classList.toggle('fullscreen');
-    }
-
-    function loadProxy() {
-      const input = document.getElementById('browser-url').value;
-      const proxyUrl = `/static/iframe.html#${input}`;
-      document.getElementById('browser-iframe').src = proxyUrl;
-    }
-
-    let isDragging = false;
-    let offsetX = 0;
-    let offsetY = 0;
-
-    function startDrag(e, appId) {
-      const app = document.getElementById(appId);
-
-      isDragging = true;
-      offsetX = e.clientX - app.offsetLeft;
-      offsetY = e.clientY - app.offsetTop;
-
-      document.addEventListener('mousemove', dragApp);
-      document.addEventListener('mouseup', stopDrag);
-
-      function dragApp(event) {
-        if (!isDragging) return;
-        app.style.left = `${event.clientX - offsetX}px`;
-        app.style.top = `${event.clientY - offsetY}px`;
-      }
-
-      function stopDrag() {
-        isDragging = false;
-        document.removeEventListener('mousemove', dragApp);
-        document.removeEventListener('mouseup', stopDrag);
-      }
-    }
+    // Loading Screen Logic
+    setTimeout(() => {
+      document.getElementById('loading-screen').style.display = 'none';
+      document.getElementById('os-interface').style.display = 'block';
+    }, 3000);
   </script>
 </body>
 </html>
