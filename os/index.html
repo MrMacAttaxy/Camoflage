@@ -18,61 +18,29 @@
       color: white;
       height: 100vh;
       overflow: hidden;
-    }
-
-    /* Loading Screen */
-    #loading-screen {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: linear-gradient(120deg, #1e1e1e, #3d4148);
       display: flex;
       flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      z-index: 10000;
+      justify-content: flex-start;
     }
 
-    #loading-text {
-      font-size: 2rem;
-      margin-bottom: 20px;
-      animation: fadeIn 2s infinite alternate;
-    }
-
+    /* Loading Bar */
     #loading-bar {
-      width: 60%;
-      height: 10px;
-      background: #444;
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 70%;
+      height: 30px;
+      background-color: #444;
       border-radius: 5px;
-      overflow: hidden;
-      position: relative;
+      display: none;
     }
 
-    #loading-bar-inner {
-      width: 0;
+    #loading-progress {
       height: 100%;
-      background: linear-gradient(90deg, #f04747, #fca311);
-      animation: loadProgress 3s forwards ease-out;
-    }
-
-    @keyframes fadeIn {
-      from {
-        opacity: 0.5;
-      }
-      to {
-        opacity: 1;
-      }
-    }
-
-    @keyframes loadProgress {
-      from {
-        width: 0;
-      }
-      to {
-        width: 100%;
-      }
+      width: 0%;
+      background-color: #5cb85c;
+      border-radius: 5px;
     }
 
     /* Taskbar */
@@ -106,7 +74,65 @@
       color: white;
     }
 
-    /* Pull-Up Screen */
+    /* App Windows */
+    .app {
+      position: absolute;
+      top: 100px;
+      left: 100px;
+      width: 800px;
+      height: 500px;
+      background-color: #2b2f33;
+      border: 2px solid #444;
+      display: none;
+      flex-direction: column;
+      z-index: 1000;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    }
+
+    .fullscreen {
+      top: 0 !important;
+      left: 0 !important;
+      width: 100% !important;
+      height: 100% !important;
+    }
+
+    .title-bar {
+      height: 40px;
+      background-color: #202225;
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 15px;
+      font-size: 1rem;
+      font-weight: bold;
+      cursor: grab;
+      border-bottom: 1px solid #444;
+    }
+
+    .title-bar button {
+      background: none;
+      border: none;
+      color: white;
+      cursor: pointer;
+      font-size: 1.2rem;
+      margin-left: 10px;
+    }
+
+    .title-bar button:hover {
+      color: #f04747;
+    }
+
+    .app-content {
+      flex: 1;
+      border: none;
+      background-color: #1e2024;
+      padding: 10px;
+    }
+
+    /* App Drawer */
     #app-drawer {
       position: fixed;
       bottom: -400px;
@@ -156,158 +182,252 @@
       background: #2f3238;
     }
 
-    /* App Windows */
-    .app {
-      position: absolute;
-      top: 100px;
-      left: 100px;
-      width: 800px;
-      height: 500px;
-      background-color: #2b2f33;
-      border: 2px solid #444;
-      display: none;
-      flex-direction: column;
-      z-index: 1000;
-      border-radius: 8px;
-      overflow: hidden;
-    }
-
-    .fullscreen {
-      top: 0 !important;
-      left: 0 !important;
-      width: 100% !important;
-      height: 100% !important;
-    }
-
-    .title-bar {
-      height: 40px;
-      background-color: #202225;
-      color: white;
+    /* Browser Tabs */
+    .browser-tabs {
       display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 0 15px;
-      font-size: 1rem;
-      font-weight: bold;
-      cursor: grab;
+      background: #202225;
+      overflow-x: auto;
+      padding: 5px;
+      border-bottom: 2px solid #444;
     }
 
-    .title-bar button {
-      background: none;
-      border: none;
-      color: white;
+    .tab {
+      padding: 10px 15px;
       cursor: pointer;
-      font-size: 1.2rem;
-      margin-left: 10px;
+      margin-right: 10px;
+      background: #2f3238;
+      color: white;
+      border-radius: 5px;
+      transition: background 0.3s;
     }
 
-    .title-bar button:hover {
-      color: #f04747;
+    .tab.active {
+      background: #5cb85c;
+      color: white;
     }
 
-    .app-content {
-      flex: 1;
-      border: none;
-      background-color: #1e2024;
-      padding: 10px;
+    .tab:hover {
+      background: #444;
     }
 
     .browser-input {
       display: flex;
-      margin-bottom: 10px;
+      justify-content: space-between;
+      margin-top: 10px;
+      background: #1e2024;
+      padding: 5px 10px;
+      border-radius: 5px;
     }
 
     .browser-input input {
-      flex: 1;
-      height: 35px;
-      border: none;
-      border-radius: 5px 0 0 5px;
-      padding: 0 10px;
-      background: #1e2024;
+      width: 80%;
+      padding: 5px;
+      border-radius: 5px;
+      border: 1px solid #444;
+      background-color: #1e2024;
       color: white;
     }
 
     .browser-input button {
-      background: #1e2024;
-      border: none;
-      border-radius: 0 5px 5px 0;
-      padding: 0 15px;
-      cursor: pointer;
-      font-size: 1.2rem;
+      width: 15%;
+      padding: 5px;
+      border-radius: 5px;
+      background-color: #5cb85c;
       color: white;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-
-    .browser-input button:hover {
-      background: #333;
+      border: none;
+      cursor: pointer;
     }
   </style>
 </head>
 <body>
-  <!-- Loading Screen -->
-  <div id="loading-screen">
-    <div id="loading-text">Loading InfaredOS...</div>
-    <div id="loading-bar">
-      <div id="loading-bar-inner"></div>
+  <!-- Loading Bar -->
+  <div id="loading-bar">
+    <div id="loading-progress"></div>
+  </div>
+
+  <!-- Taskbar -->
+  <div id="taskbar">
+    <div class="taskbar-item" onclick="toggleAppDrawer()">Apps</div>
+    <div class="taskbar-item" onclick="openApp('browser')">Browser</div>
+  </div>
+
+  <!-- App Drawer -->
+  <div id="app-drawer">
+    <div class="drawer-header">
+      <h2>App Drawer</h2>
+    </div>
+    <div class="drawer-section">
+      <h3>Installed Apps</h3>
+      <div id="installed-apps"></div>
+    </div>
+    <div class="drawer-section">
+      <h3>Play Store</h3>
+      <div class="drawer-item" onclick="installApp('YouTube', 'https://www.youtube.com')">YouTube</div>
+      <div class="drawer-item" onclick="installApp('Spotify', 'https://open.spotify.com')">Spotify</div>
+      <div class="drawer-item" onclick="installApp('Minecraft', 'https://mcraft.fun')">Minecraft</div>
+      <div class="drawer-item" onclick="installApp('Shellshock.io', 'https://shellshock.io')">Shellshock.io</div>
+      <div class="drawer-item" onclick="installApp('1v1.lol', 'https://1v1.lol')">1v1.lol</div>
     </div>
   </div>
 
-  <!-- Main Interface -->
-  <div id="os-interface" style="display: none;">
-    <!-- Taskbar -->
-    <div id="taskbar">
-      <div class="taskbar-item" onclick="toggleAppDrawer()">Apps</div>
-      <div class="taskbar-item" onclick="openApp('browser')">Browser</div>
-    </div>
-
-    <!-- App Drawer -->
-    <div id="app-drawer">
-      <div class="drawer-header">
-        <h2>App Drawer</h2>
-      </div>
-      <div class="drawer-section">
-        <h3>Installed Apps</h3>
-        <div id="installed-apps">
-          <p>No apps installed yet. Go to the Play Store to download apps.</p>
-        </div>
-      </div>
-      <div class="drawer-section">
-        <h3>Play Store</h3>
-        <div class="drawer-item" onclick="installApp('YouTube', 'https://www.youtube.com')">YouTube</div>
-        <div class="drawer-item" onclick="installApp('Spotify', 'https://open.spotify.com')">Spotify</div>
-        <div class="drawer-item" onclick="installApp('Minecraft', 'https://mcraft.fun')">Minecraft</div>
-        <div class="drawer-item" onclick="installApp('Shellshock.io', 'https://shellshock.io')">Shellshock.io</div>
-        <div class="drawer-item" onclick="installApp('1v1.lol', 'https://1v1.lol')">1v1.lol</div>
+  <!-- Browser Window -->
+  <div id="browser" class="app">
+    <div class="title-bar" onmousedown="startDrag(event, 'browser')">
+      <span>Browser</span>
+      <div>
+        <button onclick="toggleFullscreen('browser')">🖵</button>
+        <button onclick="closeApp('browser')">X</button>
       </div>
     </div>
-
-    <!-- Browser -->
-    <div id="browser" class="app">
-      <div class="title-bar" onmousedown="startDrag(event, 'browser')">
-        <span>Browser</span>
-        <div>
-          <button onclick="toggleFullscreen('browser')">🖵</button>
-          <button onclick="closeApp('browser')">X</button>
-        </div>
+    <div class="app-content">
+      <div class="browser-tabs" id="browser-tabs"></div>
+      <div class="browser-input">
+        <input id="browser-url" type="text" placeholder="Enter URL here">
+        <button onclick="loadUrl()">🔍</button>
       </div>
-      <div class="app-content">
-        <div class="browser-input">
-          <input id="browser-url" type="text" placeholder="Enter URL here">
-          <button onclick="loadProxy()">🔍</button>
-        </div>
-        <iframe id="browser-iframe" src="" style="width: 100%; height: 100%; border: none;"></iframe>
-      </div>
+      <iframe id="browser-iframe" src="" style="width: 100%; height: 100%; border: none;"></iframe>
     </div>
   </div>
 
   <script>
-    // Loading Screen Logic
-    setTimeout(() => {
-      document.getElementById('loading-screen').style.display = 'none';
-      document.getElementById('os-interface').style.display = 'block';
-    }, 3000);
+    const appDrawer = document.getElementById('app-drawer');
+    const installedAppsSection = document.getElementById('installed-apps');
+    const loadingBar = document.getElementById('loading-bar');
+    const loadingProgress = document.getElementById('loading-progress');
+    let tabs = [];
+    let currentTab = 0;
+
+    // Simulate loading the OS
+    function loadOS() {
+      loadingBar.style.display = 'block';
+      let progress = 0;
+      const interval = setInterval(() => {
+        progress += 5;
+        loadingProgress.style.width = progress + '%';
+        if (progress >= 100) {
+          clearInterval(interval);
+          loadingBar.style.display = 'none';
+        }
+      }, 150);
+    }
+
+    // Show and hide app drawer
+    function toggleAppDrawer() {
+      appDrawer.classList.toggle('open');
+    }
+
+    // Install app function
+    function installApp(name, url) {
+      const appId = name.toLowerCase().replace(/\s+/g, '-');
+      if (document.getElementById(appId)) {
+        alert(`${name} is already installed.`);
+        return;
+      }
+
+      const proxyUrl = `/static/iframe.html#${url}`;
+      const installedApp = document.createElement('div');
+      installedApp.className = 'drawer-item';
+      installedApp.textContent = name;
+      installedApp.onclick = () => openApp(appId);
+
+      installedAppsSection.appendChild(installedApp);
+
+      const newApp = document.createElement('div');
+      newApp.id = appId;
+      newApp.classList.add('app');
+      newApp.innerHTML = `
+        <div class="title-bar" onmousedown="startDrag(event, '${appId}')">
+          <span>${name}</span>
+          <div>
+            <button onclick="toggleFullscreen('${appId}')">🖵</button>
+            <button onclick="closeApp('${appId}')">X</button>
+          </div>
+        </div>
+        <iframe src="${proxyUrl}" class="app-content"></iframe>
+      `;
+      document.body.appendChild(newApp);
+    }
+
+    // Open app by ID
+    function openApp(appId) {
+      const app = document.getElementById(appId);
+      app.style.display = 'flex';
+    }
+
+    // Close app by ID
+    function closeApp(appId) {
+      const app = document.getElementById(appId);
+      app.style.display = 'none';
+    }
+
+    // Toggle fullscreen for app or browser
+    function toggleFullscreen(appId) {
+      const app = document.getElementById(appId);
+      app.classList.toggle('fullscreen');
+    }
+
+    // Browser functionality
+    function loadUrl() {
+      const url = document.getElementById('browser-url').value;
+      if (!url) return;
+
+      const proxyUrl = `/static/iframe.html#${url}`;
+      const newTab = document.createElement('div');
+      newTab.classList.add('tab');
+      newTab.textContent = url;
+      newTab.onclick = () => switchTab(tabs.length);
+      newTab.dataset.url = proxyUrl;
+
+      document.getElementById('browser-tabs').appendChild(newTab);
+
+      tabs.push(proxyUrl);
+
+      switchTab(tabs.length - 1);
+    }
+
+    function switchTab(index) {
+      currentTab = index;
+
+      const tabs = document.querySelectorAll('.tab');
+      tabs.forEach((tab, i) => {
+        if (i === currentTab) {
+          tab.classList.add('active');
+        } else {
+          tab.classList.remove('active');
+        }
+      });
+
+      document.getElementById('browser-iframe').src = tabs[currentTab].dataset.url;
+    }
+
+    // Draggable windows
+    let isDragging = false;
+    let offsetX = 0;
+    let offsetY = 0;
+
+    function startDrag(e, appId) {
+      const app = document.getElementById(appId);
+      isDragging = true;
+      offsetX = e.clientX - app.offsetLeft;
+      offsetY = e.clientY - app.offsetTop;
+
+      document.addEventListener('mousemove', dragApp);
+      document.addEventListener('mouseup', stopDrag);
+
+      function dragApp(event) {
+        if (!isDragging) return;
+        app.style.left = `${event.clientX - offsetX}px`;
+        app.style.top = `${event.clientY - offsetY}px`;
+      }
+
+      function stopDrag() {
+        isDragging = false;
+        document.removeEventListener('mousemove', dragApp);
+        document.removeEventListener('mouseup', stopDrag);
+      }
+    }
+
+    loadOS();  // Start OS loading simulation
   </script>
 </body>
 </html>
