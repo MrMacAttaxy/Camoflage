@@ -7,6 +7,51 @@
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
       <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
       <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
+      <style>
+         html body {
+                margin: 0;
+                padding: 0;
+                position: relative;
+                background-size: 100%;
+                background-position: center;
+                background-image: url('bg.jpg');
+                background-size: cover;
+                font-family: 'Libre Franklin', serif;
+                transition: 0.2s;
+            }
+
+            .mfs {
+                user-select: none;
+                margin: 0;
+                padding: 0;
+                margin-top: 50px;
+                width: 400px;
+                font-size: 90px;
+                animation: typing 1.5s steps(20, end) forwards, blink-caret .75s step-end infinite;
+                white-space: nowrap;
+                overflow: hidden;
+                border-width: 0px 10px 0px 0px;
+                border-style: solid;
+                border-color: white;
+                font-family: 'Libre Franklin', serif;
+            }
+
+            @keyframes changecolors-mfs {
+                0% { color: white; }
+                50% { color: darkgrey; }
+                100% { color: white; }
+            }
+
+            .bodymfs {
+                margin: 50px auto;
+                width: 700px;
+            }
+
+            @keyframes typing {
+                from { width: 0 }
+                to { width: 100%; }
+            }
+      </style>
    </head>
    <body>
       <nav class="navbar">
@@ -24,9 +69,9 @@
       </div>
       <div id="content">
          <h1>Search the Web <i>without restrictions</i></h1>
-
+         <div class="bodymfs">
          <form id="uv-form">
-            <input style="border-radius: 5vh;" id="uv-search-engine" value="https://www.google.com/search?q=%s" type="hidden"/> 
+            <input class="mfs" style="border-radius: 5vh;" id="uv-search-engine" value="https://www.google.com/search?q=%s" type="hidden"/> 
             <input style="border-radius: 5vh;" id="uv-address" type="text" placeholder="Search Google or type an URL" class="form__input"/>
           </form>
           <div class="desc left-margin">
