@@ -1,17 +1,20 @@
 <!doctype html>
-<html>
+<html class="libre-franklin-fontmain">
     <head>
         <meta charset="utf-8">
         <link rel="icon" type="image/x-icon" href="favicon.png">
         <title>Infared</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Anton+SC&family=Bungee+Tint&family=Funnel+Sans:ital,wght@0,300..800;1,300..800&family=Libre+Franklin:ital,wght@0,100..900;1,100..900&family=New+Amsterdam&display=swap" rel="stylesheet">
         <style>
             html, body {
                 margin: 0;
                 padding: 0;
-                font-family: "Courier New", Courier;
                 min-height: 100%;
                 background-image: url('bg.jpg');
                 background-size: cover;
+                font-family: 'Libre Franklin', serif;
             }
 
             body {
@@ -46,7 +49,6 @@
 
             .nav-links li a {
                 text-decoration: none;
-                font-family: "Courier New", Courier, monospace;
                 font-size: 20px;
                 color: white;
                 padding: 5px 10px;
@@ -63,17 +65,20 @@
             .bodymfs {
                 margin: 50px auto;
                 width: 400px;
-                box-shadow: 10px 10px 10px black;
-                backdrop-filter: blur(1vh);
             }
 
             .mfs {
-                font-family: "Courier New", Courier;
                 font-weight: bold;
-                font-size: 50px;
+                font-size: 90px;
                 color: black;
                 animation: changecolors-mfs 10s infinite linear;
                 user-select: none;
+                animation: typing 1.5s steps(20, end) forwards, blink-caret .75s step-end infinite;
+                white-space: nowrap;
+                overflow: hidden;
+                border-width: 0px 10px 0px 0px;
+                border-style: solid;
+                border-color: white;
             }
 
             @keyframes changecolors-mfs {
@@ -82,30 +87,9 @@
                 100% { color: white; }
             }
 
-            .mfs:hover {
-                font-size: 53px;
-                transition: 0.1s;
-            }
-
-            .bodymbm {
-                margin: 20px;
-                width: 175px;
-                box-shadow: 10px 10px 10px black;
-                backdrop-filter: blur(1vh);
-            }
-
-            .mbm {
-                font-family: "Courier New", Courier;
-                font-weight: bold;
-                font-size: 20px;
-                color: white;
-                animation: changecolors-mfs 10s infinite linear;
-                user-select: none;
-            }
-
-            .mbm:hover {
-                font-size: 23px;
-                transition: 0.1s;
+            @keyframes typing {
+                from { width: 0 }
+                to { width: 100%; }
             }
 
             .bottombar {
@@ -209,7 +193,6 @@
             .about-content {
                 font-size: 18px;
                 line-height: 1.8;
-                font-family: "Courier New", Courier, monospace;
                 padding: 20px;
                 border-radius: 10px;
                 background: rgba(255, 255, 255, 0.1);
@@ -263,9 +246,6 @@
                 <div class="bodymfs">
                     <h1 class="mfs">Infared</h1>
                 </div>
-                <div class="bodymbm">
-                    <p class="mbm">Made by MrMacAttaxy</p>
-                </div>
             </center>
             <section class="collabs">
                 <h2>Collaborations</h2>
@@ -286,6 +266,10 @@
                         <img src="https://static.wixstatic.com/media/598c68_4108f64ea2474a03a19c176f10eadcc0~mv2.jpg/v1/fill/w_92,h_82,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/ASTRAL%20RETURNS%20BLUE%201.jpg" alt="Astral">
                         <p>Astral</p>
                     </div>
+                    <div class="collab">
+                        <img src="thinkstudios.png" alt="Think Studios">
+                        <p>Think Studios</p>
+                    </div>
                 </div>
             </section>
             <section class="about-infared">
@@ -297,7 +281,7 @@
         </div>
         <div class="bottombar">
             <p>Copyright | Infared 2024 | Disc: <a href="https://discadia.com/ubg/">https://discadia.com/ubg/</a></p>
-            <p>Background Drawn by Prawny - Posted on Pixabay</p>
+            <p>Background by <a href="https://pixabay.com/users/amit_artios-34265881/?utm_source=link-attribution&utm_medium=referral&utm_campaign=video&utm_content=153957">Amit</a> from <a href="https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=video&utm_content=153957">Pixabay</a></p>
         </div>
         <!-- Google tag (gtag.js) -->
         <script async src="https://www.googletagmanager.com/gtag/js?id=G-97C832V55B"></script>
