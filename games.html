@@ -8,29 +8,37 @@
         
         <title>Infared</title>
 
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Anton+SC&family=Bungee+Tint&family=Funnel+Sans:ital,wght@0,300..800;1,300..800&family=Libre+Franklin:ital,wght@0,100..900;1,100..900&family=New+Amsterdam&display=swap" rel="stylesheet">
+        
         <style>
-
-            html {
+            html body {
                 margin: 0;
                 padding: 0;
-                font-family: "Courier New", Courier;
                 position: relative;
                 background-size: 100%;
                 background-position: center;
                 background-image: url('bg.jpg');
+                background-size: cover;
+                font-family: 'Libre Franklin', serif;
+                transition: 0.2s;
             }
 
             .mfs {
+                user-select: none;
                 margin: 0;
                 padding: 0;
-                font-family: "Courier New", Courier;
-                font-weight: bold;
-                font-size: 50px;
-                color: black;
-                animation: changecolors-mfs 10s infinite linear;
-                user-select: none;
-                opacity: 100%;
-                transition: 0.1s;
+                margin-top: 50px;
+                width: 400px;
+                font-size: 90px;
+                animation: typing 1.5s steps(20, end) forwards, blink-caret .75s step-end infinite;
+                white-space: nowrap;
+                overflow: hidden;
+                border-width: 0px 10px 0px 0px;
+                border-style: solid;
+                border-color: white;
+                font-family: 'Libre Franklin', serif;
             }
 
             @keyframes changecolors-mfs {
@@ -40,18 +48,13 @@
             }
 
             .bodymfs {
-                margin: 0;
-                padding: 0;
-                margin-top: 50px;
+                margin: 50px auto;
                 width: 400px;
-                box-shadow: 10px 10px 10px black;
-                border-box: black;
-                backdrop-filter: blur(1vh);
             }
 
-            .mfs:hover {
-                font-size: 53px;
-                transition: 0.1s;
+            @keyframes typing {
+                from { width: 0 }
+                to { width: 100%; }
             }
 
             .bodymbm {
@@ -101,10 +104,10 @@
             .games {
                 margin: 20px;
                 padding: 0; 
-                width: 45%;
+                width: 80%;
                 height: auto;
                 align-items: center;
-                backdrop-filter: blur(4vh);
+                background-color: black;
                 user-select: none;
                 border-radius: 2vh;
                 box-sizing: border-box;
@@ -408,15 +411,11 @@
 
             <button class="gamebtn" id="sylent" alt="sylent" onclick="gameshow('/static/iframe.html#https://canvas.schoolwebsite.dynv6.net/')"></button>
 
-            <br />
-
             <button class="gamebtn" id="eaglercraft" alt="eaglercraft" onclick="gameshow('/static/iframe.html#https://eaglercraft.com/mc/1.8.8/')"></button>
 
             <button class="gamebtn" id="retrobowl" alt="retrobowl" onclick="gameshow('/retrobowl/index.html')"></button>
 
             <button class="gamebtn" id="asteroid" alt="asteroid" onclick="gameshow('/static/iframe.html#https://broyouarewrong.mywire.org')"></button>
-
-            <br />
 
             <button class="gamebtn" id="roblox" alt="roblox" onclick="gameshow('/static/iframe.html#https://nowgg.cloud')"></button>
 
@@ -424,23 +423,17 @@
 
             <button class="gamebtn" id="crazygames" alt="crazygames" onclick="gameshow('/static/iframe.html#https://crazygames.com')"></button>
 
-            <br />
-
             <button class="gamebtn" id="cookieclicker" alt="cookieclicker" onclick="gameshow('/static/iframe.html#https://images-opensocial.googleusercontent.com/gadgets/ifr?container=ig&url=https://cdn.jsdelivr.net/gh/bobydob/JSEngine@e7d53b913d54429e5e118ca9541fb0f8f1f66bdc/dist/cc.xml')"></button>
 
             <button class="gamebtn" id="basketballstars" alt="basketballstars" onclick="gameshow('/static/iframe.html#https://prefix03568-opensocial.googleusercontent.com/gadgets/ifr?container=ig&url=https://cdn.jsdelivr.net/gh/bobydob/JSEngine@c0c9f32fd575688ff4b14309e9acf19b73f15e2a/build/bs/bs.xml')"></button>
 
             <button class="gamebtn" id="prismarineclient" alt="prismarineclient" onclick="gameshow('/static/iframe.html#https://mcraft.fun')"></button>
                                                                                                                                                   
-            <br />
-
             <button class="gamebtn" id="github" alt="github" onclick="gameshow('/static/iframe.html#https://github.com')"></button>
 
             <button class="gamebtn" id="youtube" alt="youtube" onclick="gameshow('/static/iframe.html#https://youtube.com')"></button>
 
             <button class="gamebtn" id="vercel" alt="vercel" onclick="gameshow('/static/iframe.html#https://vercel.app')"></button>
-            
-            <br />
 
             <button class="gamebtn" id="game2048" alt="game2048" onclick="gameshow('2048/index.html')"></button>
 
