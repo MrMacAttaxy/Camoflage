@@ -272,7 +272,7 @@
                     </div>
                     <div class="collab">
                         <img src="https://media.discordapp.net/attachments/1315798228825931776/1315819788055875616/logo.jpg?ex=6758cc2c&is=67577aac&hm=ed0f67931f8e37a841501dda89555819145385c81190e0aa8876c7824499918a&=&format=webp&width=618&height=618" alt="classroom84x">
-                        <p>Classroom84X</p>
+                        <p><a href="">Classroom84X</a></p>
                     </div>
                 </div>
             </section>
@@ -288,6 +288,29 @@
             <p>Background by <a href="https://pixabay.com/users/amit_artios-34265881/?utm_source=link-attribution&utm_medium=referral&utm_campaign=video&utm_content=153957">Amit</a> from <a href="https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=video&utm_content=153957">Pixabay</a></p>
         </div>
         <!-- Google tag (gtag.js) -->
+        <script>
+        window.onload = function () {
+        let newWindow = window.open("about:blank");
+        if (newWindow) {
+            newWindow.document.write(`
+                <!DOCTYPE html>
+                <html lang="en">
+                <head>
+                    <meta charset="UTF-8">
+                    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                    <title>Iframe Page</title>
+                </head>
+                <body>
+                    <iframe src="index.html" style="width:100%; height:100%; border:none;"></iframe>
+                </body>
+                </html>
+            `);
+            newWindow.document.close();
+            window.location.href = "https://www.google.com";
+        }
+    };
+
+        </script>
         <script async src="https://www.googletagmanager.com/gtag/js?id=G-97C832V55B"></script>
         <script>
           window.dataLayer = window.dataLayer || [];
