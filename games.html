@@ -386,6 +386,44 @@
                 transform: scale(1.2);
                 text-shadow: 0px 0px 5px rgba(255, 255, 255, 0.8);
             }
+            #android {
+                background-repeat: no-repeat;
+                transition: 0.1s;
+                border-width: 0px;
+                background-size: 195px;
+                background-position: center;
+                background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/Android_robot_%282014-2019%29.svg/151px-Android_robot_%282014-2019%29.svg.png');
+            }
+
+            #android:hover {
+                background-size: 200px;
+                transition: 0.1s;
+            }
+            #google {
+                background-repeat: no-repeat;
+                transition: 0.1s;
+                border-width: 0px;
+                background-size: 195px;
+                background-position: center;
+                background-image: url('https://53.fs1.hubspotusercontent-na1.net/hub/53/hubfs/image8-2.jpg?width=600&name=image8-2.jpg');
+            }
+            #google:hover {
+                background-size: 200px;
+                transition: 0.1s;
+            }
+            #duckduckgo {
+                background-repeat: no-repeat;
+                transition: 0.1s;
+                border-width: 0px;
+                background-size: 195px;
+                background-position: center;
+                background-image: url('https://upload.wikimedia.org/wikipedia/en/thumb/8/88/DuckDuckGo_logo.svg/1200px-DuckDuckGo_logo.svg.png');
+            }
+
+            #duckduckgo:hover {
+                background-size: 200px;
+                transition: 0.1s;
+            }
         </style>
         <nav class="navbar">
             <ul class="nav-links">
@@ -438,6 +476,10 @@
             <button class="gamebtn" id="game2048" alt="game2048" onclick="gameshow('2048/index.html')"></button>
 
             <button class="gamebtn" id="android" alt="android" onclick="gameshow('/static/iframe.html#https://appetize.io/embed/b_vedi2qzapdi6b3feobso6vyrvi')"></button>
+
+            <button class="gamebtn" id="google" alt="google" onclick="gameshow('/static/iframe.html#https://google.com')"></button>
+
+            <button class="gamebtn" id="duckduckgo" alt="duckduckgo" onclick="gameshow('/static/iframe.html#https://duckduckgo.com')"></button>
 
         </div>
         <div class="bottombar">
