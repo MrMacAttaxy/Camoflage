@@ -7,7 +7,7 @@
 
         <link rel="icon" type="image/x-icon" href="favicon.png">
         
-        <title>Camouflage</title>
+        <title>Infared</title>
 
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -773,7 +773,7 @@
             <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
             <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
             <div class="image-name">
-                <img src="favicon.png"><p>Camouflage</p>
+                <img src="favicon.png"><p>Infared</p>
             </div>
             <ul class="nav-links">
                 <li><a href="/"><i class="fa fa-home"></i></a></li>
@@ -853,7 +853,9 @@
             const gamewindow = document.getElementById("i");
 
             function gameshow(url) {
-            window.location.href = url;
+                window.location.href = "browser.html";
+
+                localStorage.setItem('iframeUrl', url);
             }
             
             function openFullscreen() {
