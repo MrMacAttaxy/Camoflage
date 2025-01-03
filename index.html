@@ -134,6 +134,7 @@
                 max-width: 800px;
                 border-radius: 10px;
                 box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
+                transition: 0.4s;
             }
 
             .collabs h2 {
@@ -150,6 +151,7 @@
             }
             
             .collab {
+                transition: 0.4s;
                 text-align: center;
                 width: 150px;
                 padding: 10px;
@@ -180,8 +182,9 @@
                 margin-top: 10px;
             }
 
-            .collab:hover {
-                transform: scale(1.1);
+            .collabs:hover {
+                transform: translateY(-5px);
+                transition: 0.4s;
             }
 
             .about-infared {
@@ -194,6 +197,7 @@
                 color: white;
                 border-radius: 10px;
                 box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.7);
+                transition: 0.4s;
             }
 
             .about-infared h2 {
@@ -228,18 +232,9 @@
                 font-style: italic;
             }
 
-            .about-content:hover {
-                transform: scale(1.05);
-                box-shadow: 0px 0px 25px rgba(255, 255, 255, 0.7);
-            }
-
-            @keyframes glow-text {
-                from {
-                    text-shadow: 2px 2px 10px rgba(255, 99, 132, 0.8);
-                }
-                to {
-                    text-shadow: 2px 2px 20px rgba(255, 99, 132, 1);
-                }
+            .about-infared:hover {
+                transform: translateY(-5px);
+                transition: 0.4s;
             }
             .image-name {
                 margin-left: 1%;
@@ -329,72 +324,3 @@
         </script>
     </body>
 </html>
-<script>
-    const canvas = document.createElement('canvas');
-canvas.id = 'snowCanvas';
-document.body.appendChild(canvas);
-
-const ctx = canvas.getContext('2d');
-
-canvas.width = window.innerWidth;
-canvas.height = window.innerHeight;
-
-const snowflakes = [];
-const maxSnowflakes = 150;
-
-// Snowflake class
-class Snowflake {
-    constructor() {
-        this.reset();
-    }
-
-    reset() {
-        this.x = Math.random() * canvas.width;
-        this.y = Math.random() * canvas.height - canvas.height;
-        this.radius = Math.random() * 3 + 1;
-        this.speed = Math.random() * 1 + 0.5;
-        this.opacity = Math.random() * 0.8 + 0.2; // Slightly transparent
-    }
-
-    update() {
-        this.y += this.speed;
-
-        if (this.y > canvas.height) {
-            this.reset();
-        }
-    }
-
-    draw() {
-        ctx.beginPath();
-        ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
-        ctx.fillStyle = `rgba(255, 255, 255, ${this.opacity})`;
-        ctx.fill();
-    }
-}
-
-// Create snowflakes
-for (let i = 0; i < maxSnowflakes; i++) {
-    snowflakes.push(new Snowflake());
-}
-
-// Animation loop
-function animate() {
-    ctx.clearRect(0, 0, canvas.width, canvas.height);
-
-    for (const snowflake of snowflakes) {
-        snowflake.update();
-        snowflake.draw();
-    }
-
-    requestAnimationFrame(animate);
-}
-
-animate();
-
-// Adjust canvas size on resize
-window.addEventListener('resize', () => {
-    canvas.width = window.innerWidth;
-    canvas.height = window.innerHeight;
-});
-
-</script>
