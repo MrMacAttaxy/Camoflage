@@ -41,25 +41,6 @@ app.get('/links', (req, res) => {
     res.sendFile(path.join(__dirname, 'public', 'links.html'));
 });
 
-app.get('/append', async (req, res, next) => {
-    try {
-        let { password, url } = req.query;
-        url = atob(url);
-        if (password === encryptionpassword) {
-            if (await checkIfBlocked(url)) {
-                if (!unblockedUrls.includes(url)) unblockedUrls.push(url);
-            } else if (unblockedUrls.includes(url)) {
-                unblockedUrls = unblockedUrls.filter(item => item !== url);
-            }
-            res.send(unblockedUrls.join("\n"));
-        } else {
-            res.status(403).send("Forbidden");
-        }
-    } catch (error) {
-        console.error("Append route error:", error.message);
-        res.status(500).send("Internal Server Error");
-    }
-});
 
 app.listen(PORT, () => {
     console.log(`Server is running on port http://localhost:${PORT}`);
