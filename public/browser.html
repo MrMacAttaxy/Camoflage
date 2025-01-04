@@ -1,0 +1,457 @@
+
+<!doctype html>
+<html class="libre-franklin-fontmain">
+    <head>
+        <meta charset="utf-8">
+        <link rel="icon" type="image/x-icon" href="favicon.png">
+        <title>Infared</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Anton+SC&family=Bungee+Tint&family=Funnel+Sans:ital,wght@0,300..800;1,300..800&family=Libre+Franklin:ital,wght@0,100..900;1,100..900&family=New+Amsterdam&display=swap" rel="stylesheet">
+        <style>
+            #snowCanvas {
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                pointer-events: none;
+            }
+
+            html, body {
+                margin: 0;
+                padding: 0;
+                min-height: 100%;
+                background-image: url('space.png');
+                background-size: cover;
+                font-family: 'Libre Franklin', serif;
+            }
+
+            body {
+                display: flex;
+                flex-direction: column;
+                position: relative;
+                min-height: 100vh;
+            }
+
+            .navbar {
+                background-color: rgba(50, 50, 50);
+                padding: 10px 0;
+                border: none;
+                box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+                position: sticky;
+                top: 0;
+                z-index: 1000;
+                height: auto;
+                display: flex;
+                flex-direction: row;
+                width: 100%;
+                align-items: center;
+                justify-content: space-between;
+            }
+
+            .nav-links {
+                list-style: none;
+                display: flex;
+                justify-content: flex-end;
+                gap: 20px;
+                margin: 0;
+                margin-right: 5%;
+                padding: 0;
+            }
+
+            .nav-links li {
+                display: inline;
+            }
+
+            .nav-links li a {
+                text-decoration: none;
+                font-size: 20px;
+                color: white;
+                padding: 5px 10px;
+                transition: all 0.3s ease;
+                border-radius: 0.5vh;
+            }
+
+            .nav-links li a:hover {
+                background-color: rgba(255, 255, 255, 0.2);
+            }
+
+            .bodymfs {
+                margin: 50px auto;
+                width: 400px;
+            }
+
+            .mfs {
+                font-weight: bold;
+                font-size: 90px;
+                color: black;
+                animation: changecolors-mfs 10s infinite linear;
+                user-select: none;
+                animation: typing 1.5s steps(20, end) forwards, blink-caret .75s step-end infinite;
+                white-space: nowrap;
+                overflow: hidden;
+                border-width: 0px 10px 0px 0px;
+                border-style: solid;
+                border-color: white;
+            }
+
+            @keyframes changecolors-mfs {
+                0% { color: white; }
+                50% { color: darkgrey; }
+                100% { color: white; }
+            }
+
+            @keyframes typing {
+                from { width: 0 }
+                to { width: 100%; }
+            }
+
+            .bottombar {
+                margin: 0;
+                padding: 10px 0;
+                background: rgba(50, 50, 50, 0.9);
+                color: white;
+                text-align: center;
+                font-size: 14px;
+                width: 100%;
+                border-radius: 4vh 4vh 0 0;
+                box-shadow: 0px -2px 10px rgba(0, 0, 0, 0.5);
+            }
+
+            .page-content {
+                flex: 1;
+                padding-bottom: 60px;
+            }
+
+            .collabs {
+                text-align: center;
+                padding: 50px 20px;
+                background: rgba(50, 50, 50, 0.8);
+                color: white;
+                margin: 20px auto;
+                width: 90%;
+                max-width: 800px;
+                border-radius: 10px;
+                box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
+            }
+
+            .collabs h2 {
+                font-size: 36px;
+                margin-bottom: 20px;
+                text-shadow: 2px 2px 5px black;
+            }
+
+            .collab-list {
+                display: flex;
+                justify-content: center;
+                gap: 40px;
+                flex-wrap: wrap;
+            }
+            
+            .collab {
+                text-align: center;
+                width: 150px;
+                padding: 10px;
+                background: rgba(50, 50, 50);
+                border-radius: 10px;
+                box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+                transition: transform 0.3s, box-shadow 0.3s;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                height: 200px;
+            }
+            
+            .collab img {
+                width: 100px;
+                height: 100px;
+                margin-bottom: 10px;
+                border-radius: 50%;
+                box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
+            }
+            
+            .collab p {
+                font-size: 18px;
+                font-weight: bold;
+                color: white;
+                text-shadow: 1px 1px 3px black;
+                margin-top: 10px;
+            }
+
+            .collab:hover {
+                transform: scale(1.1);
+            }
+
+            .about-infared {
+                text-align: center;
+                padding: 50px 20px;
+                margin: 20px auto;
+                width: 90%;
+                max-width: 800px;
+                background: rgba(50, 50, 50);
+                color: white;
+                border-radius: 10px;
+                box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.7);
+            }
+
+            .about-infared h2 {
+                font-size: 36px;
+                margin-bottom: 20px;
+                color: white;
+                text-shadow: 2px 2px 5px black;
+            }
+
+            .about-content {
+                font-size: 18px;
+                line-height: 1.8;
+                padding: 20px;
+                border-radius: 10px;
+                background: rgba(255, 255, 255, 0.1);
+                box-shadow: 0px 0px 15px rgba(255, 255, 255, 0.2);
+                transition: transform 0.3s, box-shadow 0.3s;
+            }
+
+            .about-content p {
+                color: white;
+                text-shadow: 1px 1px 3px black;
+            }
+
+            .about-content strong {
+                color: white;
+                text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8);
+            }
+
+            .about-content em {
+                color: lightblue;
+                font-style: italic;
+            }
+
+            .about-content:hover {
+                transform: scale(1.05);
+                box-shadow: 0px 0px 25px rgba(255, 255, 255, 0.7);
+            }
+
+            @keyframes glow-text {
+                from {
+                    text-shadow: 2px 2px 10px rgba(255, 99, 132, 0.8);
+                }
+                to {
+                    text-shadow: 2px 2px 20px rgba(255, 99, 132, 1);
+                }
+            }
+            .image-name {
+                margin-left: 1%;
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+            }
+            .image-name img {
+                margin-right: 1vh;
+                height: 4vh;
+                width: auto;
+            }
+            .image-name p {
+                font-weight: 700;
+                color: white;
+            }
+            .iframe {
+                background-color: rgba(0, 0, 0, 0.5);
+                width: 50%;
+                height: 50vh;
+                border-radius: 1vh;
+            }
+            .iframe iframe {
+                height: 90%;
+                width: 100%;
+                border-radius: 1vh;
+                border: none;
+            }
+        </style>
+    </head>
+    <body>
+        <nav class="navbar">
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+            <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+            <div class="image-name">
+                <img src="favicon.png"><p>Infared</p>
+            </div>
+            <ul class="nav-links">
+                <li><a href="/"><i class="fa fa-home"></i></a></li>
+                <li><a href="/games.html"><i class="fa fa-gamepad"></i></a></li>
+                <li><a href="/static/"><i class="fa fa-search"></i></a></li>
+                <li><a href="/apps.html"><i class="material-icons">apps</i></a></li>	
+            </ul>
+        </nav>
+        <div class="page-content">
+            <center>
+                <div class="bodymfs">
+                    <h1 class="mfs">Loading...</h1>
+                </div>
+                <div class="iframe">
+                    <iframe id="myIframe" src=""></iframe>
+                        <div class="bottombtns">
+                            <button id="btnfs" onclick="openfs()"><i class="material-icons" style="font-size:36px">fullscreen</i></button>
+                            <button id="btnrl" onclick="btnrl()">&#8634;</button>
+                        </div>
+                    <style>
+                        html body {
+                        margin: 0;
+                        padding: 0;
+                        position: relative;
+                        background-size: 100%;
+                        background-position: center;
+                        background-image: url('img/space.png');
+                        background-size: cover;
+                        font-family: 'Libre Franklin', serif;
+                        transition: 0.2s;
+                        height: 100%;
+                        width: 100%;
+                        }
+                        .bottombtns {
+                            display: flex;
+                            flex-direction: row;
+                            justify-content: center;
+                        }
+                        #btnfs {
+                            background: none;
+                            border-radius: 0.5vh;
+                            transition: 0.2s;
+                            border: none;
+                            color: white;
+                        }
+                        #btnfs:hover {
+                            transition: 0.2s;
+                            background-color: rgba(255, 255, 255, 0.2);
+                        }
+                        #btnrl {
+                            background: none;
+                            border-radius: 0.5vh;
+                            transition: 0.2s;
+                            border: none;
+                            color: white;
+                            font-size: 3vh;
+                        }
+                        #btnrl:hover {
+                            transition: 0.2s;
+                            background-color: rgba(255, 255, 255, 0.2);
+                        }
+                    </style>
+                    <script>
+
+                        function openfs() {
+                            if (document.getElementById('myIframe').requestFullscreen) {
+                                document.getElementById('myIframe').requestFullscreen();
+                            } else if (document.getElementById('myIframe').webkitRequestFullscreen) {
+                                document.getElementById('myIframe').webkitRequestFullscreen();
+                            } else if (document.getElementById('myIframe').msRequestFullscreen) { 
+                                document.getElementById('myIframe').msRequestFullscreen();
+                            }
+                        }
+                        function btnrl() {
+                        document.getElementById('myIframe').src = document.getElementById('myIframe').src;
+                        }
+                    </script>
+                </div>
+            </center>
+        <!-- Google tag (gtag.js) -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-97C832V55B"></script>
+        <script>
+
+            // Function to set the iframe URL when navigating to a different page
+function setIframeUrl(url) {
+    // Store the URL in local storage so it persists on page refreshes
+    localStorage.setItem('iframeUrl', url);
+
+    // Set the iframe's src to the stored URL from local storage
+    document.getElementById('myIframe').src = url;
+}
+
+// On page load, check if there's a stored URL in local storage
+document.addEventListener('DOMContentLoaded', function() {
+    const storedUrl = localStorage.getItem('iframeUrl');
+    if (storedUrl) {
+        // Load the stored URL into the iframe if it exists
+        document.getElementById('myIframe').src = storedUrl;
+    }
+});
+
+
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+        
+          gtag('config', 'G-97C832V55B');
+        </script>
+    </body>
+</html>
+<script>
+    const canvas = document.createElement('canvas');
+canvas.id = 'snowCanvas';
+document.body.appendChild(canvas);
+
+const ctx = canvas.getContext('2d');
+
+canvas.width = window.innerWidth;
+canvas.height = window.innerHeight;
+
+const snowflakes = [];
+const maxSnowflakes = 150;
+
+// Snowflake class
+class Snowflake {
+    constructor() {
+        this.reset();
+    }
+
+    reset() {
+        this.x = Math.random() * canvas.width;
+        this.y = Math.random() * canvas.height - canvas.height;
+        this.radius = Math.random() * 3 + 1;
+        this.speed = Math.random() * 1 + 0.5;
+        this.opacity = Math.random() * 0.8 + 0.2; // Slightly transparent
+    }
+
+    update() {
+        this.y += this.speed;
+
+        if (this.y > canvas.height) {
+            this.reset();
+        }
+    }
+
+    draw() {
+        ctx.beginPath();
+        ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
+        ctx.fillStyle = `rgba(255, 255, 255, ${this.opacity})`;
+        ctx.fill();
+    }
+}
+
+// Create snowflakes
+for (let i = 0; i < maxSnowflakes; i++) {
+    snowflakes.push(new Snowflake());
+}
+
+// Animation loop
+function animate() {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+    for (const snowflake of snowflakes) {
+        snowflake.update();
+        snowflake.draw();
+    }
+
+    requestAnimationFrame(animate);
+}
+
+animate();
+
+// Adjust canvas size on resize
+window.addEventListener('resize', () => {
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+});
+
+</script>
